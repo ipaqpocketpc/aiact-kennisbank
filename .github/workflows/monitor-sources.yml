@@ -2,8 +2,8 @@ name: Monitor EU AI Act Sources
 
 on:
   schedule:
-    # Elke maandag om 9:00 UTC
-    - cron: '0 9 * * 1'
+    # Elke dag om 8:00 UTC (9:00 NL tijd)
+    - cron: '0 8 * * *'
   workflow_dispatch: # Handmatig triggeren
 
 jobs:
@@ -14,39 +14,38 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          
       - name: Check AI Office Updates
         id: check_updates
         run: |
-          # Fetch AI Office news page
           echo "Checking AI Office for updates..."
           
-          # Get last check date from file or use 7 days ago
-          LAST_CHECK=$(cat .github/last-check.txt 2>/dev/null || date -d '7 days ago' +%Y-%m-%d)
-          echo "Last check: $LAST_CHECK"
+          # Get last check hash
+          LAST_HASH=$(cat .github/last-hash.txt 2>/dev/null || echo "none")
           
-          # Fetch latest news
+          # Fetch latest news page
           curl -s "https://digital-strategy.ec.europa.eu/en/news?topic=135" > /tmp/news.html
           
-          # Extract titles (simplified - in production use proper HTML parser)
-          grep -oP '(?<=<h3[^>]*>)[^<]+' /tmp/news.html | head -5 > /tmp/titles.txt
+          # Create hash of current content
+          CURRENT_HASH=$(grep -oP '(?<=<h3[^>]*>)[^<]+' /tmp/news.html | head -10 | md5sum | cut -d' ' -f1)
           
-          # Check if there are new items
-          if [ -s /tmp/titles.txt ]; then
+          echo "Last hash: $LAST_HASH"
+          echo "Current hash: $CURRENT_HASH"
+          
+          if [ "$LAST_HASH" != "$CURRENT_HASH" ]; then
             echo "has_updates=true" >> $GITHUB_OUTPUT
+            
+            # Extract titles
+            grep -oP '(?<=<h3[^>]*>)[^<]+' /tmp/news.html | head -5 > /tmp/titles.txt
             echo "titles<<EOF" >> $GITHUB_OUTPUT
             cat /tmp/titles.txt >> $GITHUB_OUTPUT
             echo "EOF" >> $GITHUB_OUTPUT
+            
+            # Save new hash
+            echo "$CURRENT_HASH" > .github/last-hash.txt
           else
             echo "has_updates=false" >> $GITHUB_OUTPUT
+            echo "No changes detected"
           fi
-          
-          # Update last check date
-          date +%Y-%m-%d > .github/last-check.txt
           
       - name: Create Issue if Updates Found
         if: steps.check_updates.outputs.has_updates == 'true'
@@ -54,19 +53,21 @@ jobs:
         with:
           script: |
             const titles = `${{ steps.check_updates.outputs.titles }}`;
+            const today = new Date().toISOString().split('T')[0];
             
             await github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              title: `[Auto] Nieuwe EU AI Act publicaties gevonden`,
-              body: `## Automatische check - ${new Date().toISOString().split('T')[0]}\n\nDe volgende nieuwe publicaties zijn gevonden:\n\n${titles.split('\n').map(t => `- ${t}`).join('\n')}\n\n### Bronnen\n- [AI Office News](https://digital-strategy.ec.europa.eu/en/news?topic=135)\n- [EUR-Lex AI Act](https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX%3A32024R1689)\n\n### Actie\n- [ ] Controleer relevantie\n- [ ] Update kennisbank\n- [ ] Update website content`,
-              labels: ['nieuws', 'auto-check']
+              title: `Nieuwe AI Act publicatie - ${today}`,
+              body: `## Nieuwe content gevonden!\n\nDe volgende nieuwe items zijn gedetecteerd:\n\n${titles.split('\n').filter(t => t.trim()).map(t => `- ${t}`).join('\n')}\n\n### Bronnen\n- [AI Office News](https://digital-strategy.ec.europa.eu/en/news?topic=135)\n- [EUR-Lex AI Act](https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX%3A32024R1689)\n\n### Actie\n- [ ] Check de bron\n- [ ] Maak een update post op aiacteu.nl\n- [ ] Update kennisbank indien nodig`,
+              labels: ['nieuws', 'actie-nodig']
             });
             
-      - name: Commit last check date
+      - name: Commit hash update
+        if: steps.check_updates.outputs.has_updates == 'true'
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add .github/last-check.txt || true
-          git diff --staged --quiet || git commit -m "chore: update last check date"
-          git push || true
+          git add .github/last-hash.txt
+          git commit -m "chore: update source hash"
+          git push
