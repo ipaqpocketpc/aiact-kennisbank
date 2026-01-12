@@ -1,0 +1,327 @@
+{
+  "metadata": {
+    "regulation": "EU AI Act",
+    "regulation_id": "CELEX:32024R1689",
+    "document_type": "Recitals (Overwegingen)",
+    "total_recitals": 180,
+    "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32024R1689",
+    "extracted_date": "2026-01-12",
+    "description": "De recitals (overwegingen) geven de achtergrond, context en interpretatie-richtlijnen voor de AI Act artikelen"
+  },
+  "recital_categories": [
+    {
+      "category": "Doelstellingen en Toepassingsgebied",
+      "recitals": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
+    },
+    {
+      "category": "Verboden AI-praktijken",
+      "recitals": [26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45]
+    },
+    {
+      "category": "Hoog-risico AI-systemen",
+      "recitals": [46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85]
+    },
+    {
+      "category": "Verplichtingen voor Aanbieders en Gebruikers",
+      "recitals": [86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110]
+    },
+    {
+      "category": "General-Purpose AI en Foundation Models",
+      "recitals": [111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130]
+    },
+    {
+      "category": "Governance en Handhaving",
+      "recitals": [131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155]
+    },
+    {
+      "category": "Sancties en Overgangsbepalingen",
+      "recitals": [156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180]
+    }
+  ],
+  "key_recitals": [
+    {
+      "recital_number": 1,
+      "topic": "Doel van de verordening",
+      "summary": "Het doel is om de werking van de interne markt te verbeteren en het gebruik van mensgerichte en betrouwbare AI te bevorderen, terwijl een hoog niveau van bescherming van gezondheid, veiligheid en grondrechten wordt gewaarborgd.",
+      "relevance": "Fundamentele doelstelling die alle andere bepalingen stuurt"
+    },
+    {
+      "recital_number": 2,
+      "topic": "AI als transformatieve technologie",
+      "summary": "AI-systemen kunnen economische en maatschappelijke voordelen bieden in veel sectoren, maar kunnen ook nieuwe risico's of negatieve gevolgen voor individuen of de samenleving creëren.",
+      "relevance": "Erkent zowel kansen als risico's van AI"
+    },
+    {
+      "recital_number": 6,
+      "topic": "Definitie van AI-systeem",
+      "summary": "De definitie van AI-systeem is gebaseerd op de belangrijkste kenmerken van AI, namelijk het vermogen om conclusies af te leiden, en is in lijn met de OESO-definitie.",
+      "relevance": "Verduidelijkt de brede maar technologie-neutrale definitie"
+    },
+    {
+      "recital_number": 12,
+      "topic": "Toepassingsgebied - wat valt buiten",
+      "summary": "De verordening is niet van toepassing op AI-systemen die uitsluitend voor militaire, defensie- of nationale veiligheidsdoeleinden worden gebruikt, noch op AI-systemen die uitsluitend voor wetenschappelijk onderzoek worden ontwikkeld.",
+      "relevance": "Belangrijke uitzonderingen op het toepassingsgebied"
+    },
+    {
+      "recital_number": 15,
+      "topic": "Extraterritoriale werking",
+      "summary": "De verordening is van toepassing op aanbieders die AI-systemen in de Unie op de markt brengen of in gebruik stellen, ongeacht of zij in de Unie of in een derde land zijn gevestigd.",
+      "relevance": "Brussels Effect - wereldwijde impact van de wet"
+    },
+    {
+      "recital_number": 26,
+      "topic": "Verboden manipulatie",
+      "summary": "AI-systemen die subliminale technieken gebruiken of de kwetsbaarheden van personen exploiteren om hun gedrag wezenlijk te verstoren op een manier die hen of anderen schade berokkent, moeten worden verboden.",
+      "relevance": "Achtergrond bij verbod op manipulatieve AI"
+    },
+    {
+      "recital_number": 31,
+      "topic": "Verbod op sociale scoring",
+      "summary": "AI-systemen die door overheidsinstanties worden gebruikt voor het evalueren of classificeren van natuurlijke personen op basis van hun sociale gedrag of persoonlijkheidskenmerken moeten worden verboden.",
+      "relevance": "Bescherming tegen sociale controle door overheden"
+    },
+    {
+      "recital_number": 33,
+      "topic": "Biometrische identificatie",
+      "summary": "Het gebruik van real-time biometrische identificatiesystemen op afstand in openbare ruimten voor rechtshandhavingsdoeleinden is bijzonder intrusief en moet strikt worden gereguleerd.",
+      "relevance": "Context voor strenge regels rond biometrie"
+    },
+    {
+      "recital_number": 42,
+      "topic": "Hoog-risico classificatie logica",
+      "summary": "AI-systemen die als hoog-risico worden ingedeeld zijn systemen die een aanzienlijk risico voor de gezondheid, veiligheid of grondrechten van personen inhouden.",
+      "relevance": "Rationale achter de hoog-risico indeling"
+    },
+    {
+      "recital_number": 47,
+      "topic": "Biometrische systemen als hoog-risico",
+      "summary": "AI-systemen voor biometrische identificatie en categorisatie moeten als hoog-risico worden beschouwd vanwege de potentiële impact op privacy en grondrechten.",
+      "relevance": "Waarom biometrie altijd hoog-risico is"
+    },
+    {
+      "recital_number": 53,
+      "topic": "Kritieke infrastructuur",
+      "summary": "AI-systemen die worden gebruikt als veiligheidscomponenten bij het beheer van kritieke infrastructuur moeten als hoog-risico worden beschouwd vanwege potentiële risico's voor leven en gezondheid.",
+      "relevance": "Bescherming kritieke systemen"
+    },
+    {
+      "recital_number": 57,
+      "topic": "AI in onderwijs",
+      "summary": "AI-systemen in onderwijs kunnen de onderwijsresultaten en toegang tot onderwijs beïnvloeden en moeten daarom als hoog-risico worden beschouwd.",
+      "relevance": "Bescherming van leerlingen en studenten"
+    },
+    {
+      "recital_number": 58,
+      "topic": "AI in werkgelegenheid",
+      "summary": "AI-systemen voor werving, selectie en HR-beslissingen kunnen aanzienlijke gevolgen hebben voor carrièrevooruitzichten en levensonderhoud en zijn daarom hoog-risico.",
+      "relevance": "Bescherming werknemers en sollicitanten"
+    },
+    {
+      "recital_number": 60,
+      "topic": "AI voor essentiële diensten",
+      "summary": "AI-systemen die de toegang tot essentiële private en publieke diensten bepalen, zoals gezondheidszorg of sociale voorzieningen, zijn hoog-risico.",
+      "relevance": "Bescherming toegang tot basisdiensten"
+    },
+    {
+      "recital_number": 64,
+      "topic": "AI in rechtshandhaving",
+      "summary": "AI-systemen die door rechtshandhavingsinstanties worden gebruikt, kunnen aanzienlijke gevolgen hebben voor grondrechten en moeten streng worden gereguleerd.",
+      "relevance": "Balans veiligheid en burgerrechten"
+    },
+    {
+      "recital_number": 67,
+      "topic": "AI in migratie en grenscontrole",
+      "summary": "AI-systemen voor migratiebeheer kunnen kwetsbare personen treffen en moeten als hoog-risico worden behandeld.",
+      "relevance": "Bescherming migranten en asielzoekers"
+    },
+    {
+      "recital_number": 70,
+      "topic": "AI in justitie",
+      "summary": "AI-systemen ter ondersteuning van rechterlijke besluitvorming kunnen de rechtsstaat en grondrechten beïnvloeden.",
+      "relevance": "Onafhankelijkheid rechtspraak"
+    },
+    {
+      "recital_number": 72,
+      "topic": "Kwaliteitsmanagementsysteem",
+      "summary": "Aanbieders van hoog-risico AI-systemen moeten een kwaliteitsmanagementsysteem opzetten om naleving te waarborgen.",
+      "relevance": "Organisatorische compliance-eisen"
+    },
+    {
+      "recital_number": 74,
+      "topic": "Data governance",
+      "summary": "Training-, validatie- en testdatasets moeten voldoen aan kwaliteitscriteria om bias en discriminatie te voorkomen.",
+      "relevance": "Datakwaliteit als basis voor eerlijke AI"
+    },
+    {
+      "recital_number": 77,
+      "topic": "Technische documentatie",
+      "summary": "Gedetailleerde technische documentatie is essentieel voor het beoordelen van naleving en voor markttoezichtactiviteiten.",
+      "relevance": "Transparantie-eisen voor toezichthouders"
+    },
+    {
+      "recital_number": 79,
+      "topic": "Logging en traceerbaarheid",
+      "summary": "Automatische logging van gebeurtenissen tijdens de werking van hoog-risico AI-systemen is noodzakelijk voor traceerbaarheid.",
+      "relevance": "Verantwoordingsmechanisme"
+    },
+    {
+      "recital_number": 82,
+      "topic": "Menselijk toezicht",
+      "summary": "Hoog-risico AI-systemen moeten zodanig worden ontworpen dat effectief menselijk toezicht mogelijk is tijdens het gebruik.",
+      "relevance": "Human-in-the-loop principe"
+    },
+    {
+      "recital_number": 85,
+      "topic": "Nauwkeurigheid en robuustheid",
+      "summary": "Hoog-risico AI-systemen moeten nauwkeurig, robuust en cyberbeveiligd zijn gedurende hun levenscyclus.",
+      "relevance": "Technische betrouwbaarheidseisen"
+    },
+    {
+      "recital_number": 91,
+      "topic": "Gebruikersverplichtingen",
+      "summary": "Gebruikers (deployers) van hoog-risico AI-systemen moeten het systeem gebruiken volgens de instructies en menselijk toezicht garanderen.",
+      "relevance": "Verantwoordelijkheid bij inzet AI"
+    },
+    {
+      "recital_number": 99,
+      "topic": "Transparantieverplichtingen",
+      "summary": "Personen moeten geïnformeerd worden wanneer zij interacteren met AI-systemen, tenzij dit duidelijk is uit de context.",
+      "relevance": "Recht om te weten dat je met AI praat"
+    },
+    {
+      "recital_number": 100,
+      "topic": "Deepfakes en synthetische content",
+      "summary": "AI-gegenereerde of gemanipuleerde content (deepfakes) moet als zodanig worden gelabeld om desinformatie tegen te gaan.",
+      "relevance": "Bescherming tegen misleiding"
+    },
+    {
+      "recital_number": 102,
+      "topic": "General-purpose AI models",
+      "summary": "General-purpose AI-modellen kunnen in veel verschillende contexten worden gebruikt en vereisen specifieke verplichtingen vanwege hun brede inzetbaarheid.",
+      "relevance": "Rationale voor GPAI-regels"
+    },
+    {
+      "recital_number": 110,
+      "topic": "Systemische risico's",
+      "summary": "Zeer capabele GPAI-modellen kunnen systemische risico's vormen die specifieke maatregelen vereisen.",
+      "relevance": "Extra verplichtingen voor grote AI-modellen"
+    },
+    {
+      "recital_number": 111,
+      "topic": "FLOPS drempelwaarde",
+      "summary": "Een drempelwaarde van 10^25 FLOPS voor training wordt als indicator gebruikt voor potentiële systemische risico's.",
+      "relevance": "Technische grens voor systemisch risico"
+    },
+    {
+      "recital_number": 114,
+      "topic": "Red teaming",
+      "summary": "Aanbieders van GPAI-modellen met systemisch risico moeten adversarial testing (red teaming) uitvoeren.",
+      "relevance": "Beveiligingstesten voor grote modellen"
+    },
+    {
+      "recital_number": 118,
+      "topic": "Copyright en AI training",
+      "summary": "De AI Act doet geen afbreuk aan het auteursrecht. Aanbieders moeten een samenvatting van trainingsdata publiceren.",
+      "relevance": "Relatie met intellectueel eigendom"
+    },
+    {
+      "recital_number": 125,
+      "topic": "Codes of Practice",
+      "summary": "Het AI Office kan gedragscodes ontwikkelen om de naleving van GPAI-verplichtingen te faciliteren.",
+      "relevance": "Soft law als aanvulling op regelgeving"
+    },
+    {
+      "recital_number": 129,
+      "topic": "AI Office",
+      "summary": "Het AI Office wordt opgericht als onderdeel van de Commissie om toezicht op GPAI-modellen te coördineren.",
+      "relevance": "Centrale EU-toezichthouder"
+    },
+    {
+      "recital_number": 133,
+      "topic": "AI Board",
+      "summary": "De AI Board bestaat uit vertegenwoordigers van lidstaten en adviseert de Commissie over AI-beleid.",
+      "relevance": "Governance structuur"
+    },
+    {
+      "recital_number": 136,
+      "topic": "Nationale bevoegde autoriteiten",
+      "summary": "Elke lidstaat moet nationale bevoegde autoriteiten aanwijzen voor markttoezicht en handhaving.",
+      "relevance": "Decentrale handhaving"
+    },
+    {
+      "recital_number": 141,
+      "topic": "Regulatory sandboxes",
+      "summary": "AI-regulatory sandboxes bieden een gecontroleerde omgeving voor het testen van innovatieve AI-systemen.",
+      "relevance": "Innovatievriendelijke maatregelen"
+    },
+    {
+      "recital_number": 145,
+      "topic": "Ondersteuning MKB",
+      "summary": "De verordening voorziet in maatregelen om de nalevingslast voor kleine en middelgrote ondernemingen te verlichten.",
+      "relevance": "MKB-vriendelijke implementatie"
+    },
+    {
+      "recital_number": 160,
+      "topic": "Boetes en sancties",
+      "summary": "Sancties moeten doeltreffend, evenredig en afschrikkend zijn, rekening houdend met de ernst van de inbreuk.",
+      "relevance": "Afschrikking en proportionaliteit"
+    },
+    {
+      "recital_number": 165,
+      "topic": "Relatie met GDPR",
+      "summary": "De AI Act is complementair aan de AVG en doet geen afbreuk aan de rechten onder de privacywetgeving.",
+      "relevance": "Samenspel met bestaande wetgeving"
+    },
+    {
+      "recital_number": 173,
+      "topic": "Gefaseerde inwerkingtreding",
+      "summary": "De verordening treedt gefaseerd in werking om marktdeelnemers voldoende tijd te geven om zich voor te bereiden.",
+      "relevance": "Implementatietijdlijn"
+    },
+    {
+      "recital_number": 176,
+      "topic": "Overgangsbepalingen",
+      "summary": "AI-systemen die al op de markt zijn voordat de verordening van toepassing wordt, krijgen een overgangsperiode.",
+      "relevance": "Bescherming bestaande systemen"
+    },
+    {
+      "recital_number": 180,
+      "topic": "Inwerkingtreding",
+      "summary": "De verordening treedt 20 dagen na publicatie in werking en is 24 maanden daarna volledig van toepassing.",
+      "relevance": "Formele inwerkingtreding"
+    }
+  ],
+  "interpretation_guidance": {
+    "purpose": "Recitals helpen bij de interpretatie van de artikelen maar zijn zelf niet juridisch bindend",
+    "legal_status": "Overwegingen (recitals) maken deel uit van de wetgeving maar zijn ondergeschikt aan de artikelen",
+    "usage": [
+      "Verduidelijken van de intentie van de wetgever",
+      "Context geven aan specifieke bepalingen",
+      "Hulpmiddel bij juridische interpretatie",
+      "Achtergrond voor beleidskeuzes"
+    ]
+  },
+  "thematic_overview": {
+    "fundamental_rights_protection": {
+      "recitals": [1, 2, 3, 4, 5, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35],
+      "theme": "Bescherming van grondrechten en menselijke waardigheid als kerndoelstelling"
+    },
+    "innovation_balance": {
+      "recitals": [2, 4, 5, 141, 142, 143, 144, 145],
+      "theme": "Balans tussen regulering en innovatie-bevordering"
+    },
+    "risk_based_approach": {
+      "recitals": [42, 43, 44, 45, 46, 47, 48, 49, 50],
+      "theme": "Risicogebaseerde benadering als reguleringsfilosofie"
+    },
+    "transparency_trust": {
+      "recitals": [99, 100, 101, 102, 103, 104],
+      "theme": "Transparantie als basis voor vertrouwen in AI"
+    },
+    "global_competitiveness": {
+      "recitals": [6, 7, 15, 16, 17, 18],
+      "theme": "EU-positie in mondiale AI-ontwikkeling"
+    }
+  }
+}
