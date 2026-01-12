@@ -1,0 +1,78 @@
+{
+  "lastUpdated": "2026-01-12",
+  "version": "1.0.0",
+  "categories": [
+    {
+      "id": "forbidden",
+      "name": "Verboden AI",
+      "level": 4,
+      "color": "#dc2626",
+      "description": "AI-praktijken met onaanvaardbare risicos - volledig verboden.",
+      "article": "Artikel 5",
+      "effectiveDate": "2025-02-02",
+      "practices": [
+        "Subliminale manipulatie",
+        "Exploitatie kwetsbaarheden",
+        "Sociale scoring door overheden",
+        "Biometrische categorisatie op gevoelige kenmerken",
+        "Ongerichte gezichtsherkenning scraping",
+        "Emotieherkenning werk/school",
+        "Voorspellend politiewerk op profilering",
+        "Real-time biometrische identificatie openbare ruimten"
+      ],
+      "source": "https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX%3A32024R1689"
+    },
+    {
+      "id": "high-risk",
+      "name": "Hoog-risico AI",
+      "level": 3,
+      "color": "#f97316",
+      "description": "Significante impact op gezondheid, veiligheid of rechten.",
+      "article": "Artikel 6, Annex I, III",
+      "effectiveDate": "2026-08-02",
+      "domains": [
+        "Biometrie",
+        "Kritieke infrastructuur",
+        "Onderwijs",
+        "Werkgelegenheid",
+        "Essentiele diensten",
+        "Rechtshandhaving",
+        "Migratie",
+        "Rechtspraak"
+      ],
+      "requirements": [
+        "Risicobeheer",
+        "Data governance",
+        "Documentatie",
+        "Logging",
+        "Menselijk toezicht",
+        "Conformiteitsbeoordeling",
+        "CE-markering"
+      ],
+      "source": "https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX%3A32024R1689"
+    },
+    {
+      "id": "limited-risk",
+      "name": "Beperkt risico AI",
+      "level": 2,
+      "color": "#eab308",
+      "description": "Transparantieverplichtingen.",
+      "article": "Artikel 50",
+      "effectiveDate": "2026-08-02",
+      "types": ["Chatbots", "Deepfakes", "Emotiedetectie"],
+      "requirements": ["Gebruikers informeren over AI", "AI-content labelen"],
+      "source": "https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX%3A32024R1689"
+    },
+    {
+      "id": "minimal-risk",
+      "name": "Minimaal risico AI",
+      "level": 1,
+      "color": "#22c55e",
+      "description": "Geen specifieke verplichtingen.",
+      "article": "Artikel 95",
+      "effectiveDate": "2024-08-01",
+      "examples": ["Spam filters", "AI in games", "Voorraad optimalisatie", "Aanbevelingen"],
+      "source": "https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX%3A32024R1689"
+    }
+  ]
+}

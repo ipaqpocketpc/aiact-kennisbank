@@ -1,0 +1,77 @@
+{
+  "lastUpdated": "2026-01-12",
+  "version": "1.0.0",
+  "terms": [
+    {
+      "id": "ai-systeem",
+      "term": "AI-systeem",
+      "definition": "Een machine-gebaseerd systeem dat met autonomie werkt en output genereert zoals voorspellingen, aanbevelingen of beslissingen.",
+      "source": "Artikel 3(1)",
+      "sourceUrl": "https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX%3A32024R1689"
+    },
+    {
+      "id": "gpai",
+      "term": "General-purpose AI (GPAI)",
+      "definition": "AI-model getraind met veel data dat een breed scala aan taken kan uitvoeren.",
+      "source": "Artikel 3(63)",
+      "sourceUrl": "https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX%3A32024R1689",
+      "examples": ["GPT-4", "Claude", "Gemini", "Llama"]
+    },
+    {
+      "id": "aanbieder",
+      "term": "Aanbieder (Provider)",
+      "definition": "Wie een AI-systeem ontwikkelt en op de markt brengt.",
+      "source": "Artikel 3(3)",
+      "sourceUrl": "https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX%3A32024R1689"
+    },
+    {
+      "id": "gebruiker",
+      "term": "Gebruiker (Deployer)",
+      "definition": "Wie een AI-systeem onder eigen verantwoordelijkheid gebruikt.",
+      "source": "Artikel 3(4)",
+      "sourceUrl": "https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX%3A32024R1689"
+    },
+    {
+      "id": "hoog-risico",
+      "term": "Hoog-risico AI",
+      "definition": "AI-systemen met significante impact op gezondheid, veiligheid of fundamentele rechten (Annex I en III).",
+      "source": "Artikel 6",
+      "sourceUrl": "https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX%3A32024R1689"
+    },
+    {
+      "id": "conformiteitsbeoordeling",
+      "term": "Conformiteitsbeoordeling",
+      "definition": "Proces om aan te tonen dat hoog-risico AI voldoet aan de eisen.",
+      "source": "Artikel 43",
+      "sourceUrl": "https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX%3A32024R1689"
+    },
+    {
+      "id": "ce-markering",
+      "term": "CE-markering",
+      "definition": "Markering dat AI-systeem voldoet aan AI Act eisen.",
+      "source": "Artikel 48",
+      "sourceUrl": "https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX%3A32024R1689"
+    },
+    {
+      "id": "notified-body",
+      "term": "Notified body",
+      "definition": "Onafhankelijke organisatie voor conformiteitsbeoordelingen.",
+      "source": "Artikelen 28-39",
+      "sourceUrl": "https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX%3A32024R1689"
+    },
+    {
+      "id": "ai-office",
+      "term": "AI Office",
+      "definition": "EU-orgaan voor AI Act implementatie en handhaving.",
+      "source": "Hoofdstuk VII",
+      "sourceUrl": "https://digital-strategy.ec.europa.eu/en/policies/ai-office"
+    },
+    {
+      "id": "sandbox",
+      "term": "AI Regulatory Sandbox",
+      "definition": "Gecontroleerde testomgeving voor innovatieve AI onder toezicht.",
+      "source": "Artikelen 57-63",
+      "sourceUrl": "https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX%3A32024R1689"
+    }
+  ]
+}

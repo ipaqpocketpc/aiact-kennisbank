@@ -1,0 +1,66 @@
+{
+  "lastUpdated": "2026-01-12",
+  "version": "1.0.0",
+  "legislation": {
+    "name": "AI Act",
+    "celex": "32024R1689",
+    "publishedDate": "2024-07-12",
+    "inForceDate": "2024-08-01"
+  },
+  "milestones": [
+    {
+      "id": "in-force",
+      "date": "2024-08-01",
+      "title": "AI Act in werking",
+      "description": "De AI Act treedt officieel in werking.",
+      "status": "completed",
+      "articles": ["Artikel 113"],
+      "source": "https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX%3A32024R1689"
+    },
+    {
+      "id": "forbidden-practices",
+      "date": "2025-02-02",
+      "title": "Verboden AI praktijken",
+      "description": "Verbod op AI met onaanvaardbare risicos: sociale scoring, manipulatie, biometrische categorisatie, emotieherkenning werk/school.",
+      "status": "completed",
+      "articles": ["Artikel 5"],
+      "source": "https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX%3A32024R1689"
+    },
+    {
+      "id": "ai-literacy",
+      "date": "2025-02-02",
+      "title": "AI-geletterdheid",
+      "description": "Personeel moet voldoende AI kennis hebben.",
+      "status": "completed",
+      "articles": ["Artikel 4"],
+      "source": "https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX%3A32024R1689"
+    },
+    {
+      "id": "gpai-obligations",
+      "date": "2025-08-02",
+      "title": "GPAI verplichtingen",
+      "description": "Verplichtingen voor general-purpose AI modellen: documentatie, copyright, transparantie.",
+      "status": "upcoming",
+      "articles": ["Artikel 51-56"],
+      "source": "https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX%3A32024R1689"
+    },
+    {
+      "id": "high-risk-full",
+      "date": "2026-08-02",
+      "title": "Hoog-risico AI",
+      "description": "Alle verplichtingen voor hoog-risico AI van kracht.",
+      "status": "upcoming",
+      "articles": ["Artikel 6", "Annex I", "Annex III"],
+      "source": "https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX%3A32024R1689"
+    },
+    {
+      "id": "full-application",
+      "date": "2027-08-02",
+      "title": "Volledige toepassing",
+      "description": "Alle bepalingen van toepassing, inclusief bestaande systemen.",
+      "status": "upcoming",
+      "articles": ["Artikel 113"],
+      "source": "https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX%3A32024R1689"
+    }
+  ]
+}

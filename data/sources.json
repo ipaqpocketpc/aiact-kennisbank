@@ -1,0 +1,82 @@
+{
+  "lastUpdated": "2026-01-12",
+  "version": "1.0.0",
+  "sources": {
+    "legislation": [
+      {
+        "id": "ai-act-nl",
+        "name": "AI Act - Nederlandse versie",
+        "url": "https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX%3A32024R1689",
+        "urlPdf": "https://eur-lex.europa.eu/legal-content/NL/TXT/PDF/?uri=CELEX:32024R1689",
+        "celex": "32024R1689",
+        "publishedDate": "2024-07-12",
+        "inForceDate": "2024-08-01",
+        "language": "nl",
+        "official": true
+      },
+      {
+        "id": "ai-act-en",
+        "name": "AI Act - English version",
+        "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689",
+        "celex": "32024R1689",
+        "language": "en",
+        "official": true
+      }
+    ],
+    "guidance": [
+      {
+        "id": "ai-office",
+        "name": "European AI Office",
+        "url": "https://digital-strategy.ec.europa.eu/en/policies/ai-office",
+        "description": "Official EU body for AI Act implementation",
+        "official": true
+      },
+      {
+        "id": "ai-board",
+        "name": "European AI Board",
+        "url": "https://digital-strategy.ec.europa.eu/en/policies/ai-board",
+        "official": true
+      },
+      {
+        "id": "ai-act-faq",
+        "name": "AI Act FAQ",
+        "url": "https://digital-strategy.ec.europa.eu/en/faqs/ai-act-questions-and-answers",
+        "official": true
+      }
+    ],
+    "databases": [
+      {
+        "id": "nando",
+        "name": "NANDO Database",
+        "url": "https://ec.europa.eu/growth/tools-databases/nando/",
+        "description": "Notified bodies database",
+        "official": true
+      },
+      {
+        "id": "ai-act-explorer",
+        "name": "AI Act Explorer",
+        "url": "https://artificialintelligenceact.eu/",
+        "official": false
+      }
+    ],
+    "nationalAuthorities": {
+      "nl": [
+        {
+          "id": "acm",
+          "name": "Autoriteit Consument & Markt",
+          "url": "https://www.acm.nl/"
+        },
+        {
+          "id": "ap",
+          "name": "Autoriteit Persoonsgegevens",
+          "url": "https://autoriteitpersoonsgegevens.nl/"
+        },
+        {
+          "id": "rijksoverheid",
+          "name": "Rijksoverheid AI",
+          "url": "https://www.rijksoverheid.nl/onderwerpen/kunstmatige-intelligentie-ai"
+        }
+      ]
+    }
+  }
+}
