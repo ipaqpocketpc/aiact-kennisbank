@@ -1,0 +1,687 @@
+{
+  "metadata": {
+    "regulation": "EU AI Act",
+    "document_type": "Sector-Specific Compliance Guides",
+    "last_updated": "2026-01-12",
+    "purpose": "Praktische compliance-gidsen per sector met specifieke aandachtspunten"
+  },
+  "sectors": [
+    {
+      "sector_id": "healthcare",
+      "sector_name": "Gezondheidszorg",
+      "description": "AI in zorginstellingen, zorgverzekeraars, farmaceutische bedrijven en medtech",
+      "risk_level": "Vaak Hoog-Risico",
+      "relevant_provisions": {
+        "high_risk_areas": [
+          {
+            "area": "Medische diagnose",
+            "annex": "Bijlage I (via MDR)",
+            "requirement": "Conformiteit met Medical Device Regulation 2017/745",
+            "examples": ["AI-gestuurde beeldanalyse", "Diagnostische algoritmen", "Beslisondersteunende systemen"]
+          },
+          {
+            "area": "Triage en prioritering",
+            "annex": "Bijlage III, punt 5.5",
+            "requirement": "Nooddienstuitzending classificatie",
+            "examples": ["Spoedpost triagesystemen", "112 meldkamer prioritering"]
+          },
+          {
+            "area": "Verzekeringspremies",
+            "annex": "Bijlage III, punt 5.4",
+            "requirement": "Risicobeoordeling zorgverzekering",
+            "examples": ["Premieberekening op basis van AI", "Acceptatiebeleid"]
+          }
+        ],
+        "prohibited_practices": [
+          {
+            "practice": "Emotieherkenning",
+            "article": "Artikel 5(1)(f)",
+            "note": "UITZONDERING: Medisch gebruik toegestaan met toestemming"
+          }
+        ]
+      },
+      "compliance_steps": [
+        {
+          "step": 1,
+          "action": "Inventariseer alle AI-systemen",
+          "detail": "Maak een lijst van alle AI-toepassingen in diagnostiek, behandeling, administratie"
+        },
+        {
+          "step": 2,
+          "action": "Classificeer als medisch hulpmiddel",
+          "detail": "Bepaal of AI onder MDR valt - zo ja, volg MDR-conformiteitstraject"
+        },
+        {
+          "step": 3,
+          "action": "Voer FRIA uit",
+          "detail": "Grondrechteneffectbeoordeling voor patiëntengevoelige AI"
+        },
+        {
+          "step": 4,
+          "action": "Implementeer menselijk toezicht",
+          "detail": "Zorgprofessionals moeten AI-adviezen kunnen overrulen"
+        },
+        {
+          "step": 5,
+          "action": "Train personeel",
+          "detail": "AI-geletterdheid voor artsen, verpleegkundigen, administrators"
+        }
+      ],
+      "special_considerations": [
+        "Patiëntgegevens vallen ook onder AVG",
+        "Medische hulpmiddelen hebben dubbele regulering (AI Act + MDR)",
+        "Klinische validatie is essentieel",
+        "Interoperabiliteit met EPD-systemen"
+      ],
+      "key_deadlines": {
+        "prohibited_practices": "2 februari 2025",
+        "high_risk_via_mdr": "2 augustus 2027"
+      }
+    },
+    {
+      "sector_id": "finance",
+      "sector_name": "Financiële Dienstverlening",
+      "description": "Banken, verzekeraars, kredietverstrekkers, fintechs en beleggingsinstellingen",
+      "risk_level": "Vaak Hoog-Risico",
+      "relevant_provisions": {
+        "high_risk_areas": [
+          {
+            "area": "Kredietbeoordeling",
+            "annex": "Bijlage III, punt 5.3",
+            "requirement": "Kredietwaardigheidsbeoordelingen voor natuurlijke personen",
+            "examples": ["Credit scoring", "Hypotheekbeslissingen", "BNPL-algoritmen"],
+            "exception": "Fraudedetectie is UITGEZONDERD van hoog-risico"
+          },
+          {
+            "area": "Verzekeringspremies",
+            "annex": "Bijlage III, punt 5.4",
+            "requirement": "Alleen levens- en ziektekostenverzekering",
+            "examples": ["Premieberekening", "Acceptatiebeleid", "Claimafhandeling"],
+            "note": "Autoverzekering en reisverzekering zijn NIET hoog-risico"
+          }
+        ],
+        "transparency_requirements": [
+          {
+            "area": "Kredietbeslissingen",
+            "requirement": "Recht op uitleg onder AVG blijft van toepassing",
+            "article": "Artikel 22 AVG + Artikel 50 AI Act"
+          }
+        ]
+      },
+      "compliance_steps": [
+        {
+          "step": 1,
+          "action": "Audit bestaande modellen",
+          "detail": "Inventariseer alle credit scoring, underwriting en fraudedetectie AI"
+        },
+        {
+          "step": 2,
+          "action": "Documenteer discriminatie-checks",
+          "detail": "Toon aan dat modellen geen proxy-discriminatie bevatten"
+        },
+        {
+          "step": 3,
+          "action": "Implementeer uitlegbaarheid",
+          "detail": "Consumenten moeten beslissingen kunnen begrijpen"
+        },
+        {
+          "step": 4,
+          "action": "Stel menselijke override in",
+          "detail": "Negatieve beslissingen moeten door mens herbeoordeeld kunnen worden"
+        },
+        {
+          "step": 5,
+          "action": "Registreer in EU database",
+          "detail": "Hoog-risico systemen moeten geregistreerd worden"
+        }
+      ],
+      "special_considerations": [
+        "Samenloop met financiële toezichtwetgeving (DNB, AFM)",
+        "Model Risk Management frameworks zijn basis",
+        "DORA (Digital Operational Resilience Act) is aanvullend",
+        "ESG-scoring kan ook onder AI Act vallen"
+      ],
+      "key_deadlines": {
+        "full_compliance": "2 augustus 2026"
+      }
+    },
+    {
+      "sector_id": "hr_recruitment",
+      "sector_name": "HR & Recruitment",
+      "description": "Werkgevers, uitzendbureaus, HR-softwareleveranciers en recruitmentplatforms",
+      "risk_level": "Hoog-Risico",
+      "relevant_provisions": {
+        "high_risk_areas": [
+          {
+            "area": "Werving en selectie",
+            "annex": "Bijlage III, punt 4.1",
+            "examples": ["CV-screening", "Sollicitantenselectie", "Matching platforms", "Video-interview analyse"]
+          },
+          {
+            "area": "Arbeidsrelatie beslissingen",
+            "annex": "Bijlage III, punt 4.2",
+            "examples": ["Promotie-algoritmen", "Ontslagbeslissingen", "Taaktoewijzing", "Shift scheduling"]
+          },
+          {
+            "area": "Prestatiemonitoring",
+            "annex": "Bijlage III, punt 4.3",
+            "examples": ["Productiviteitsmonitoring", "Keystroke logging", "Warehouse tracking"]
+          }
+        ],
+        "prohibited_practices": [
+          {
+            "practice": "Emotieherkenning op werkplek",
+            "article": "Artikel 5(1)(f)",
+            "description": "Volledig verboden - geen uitzonderingen",
+            "examples": ["Emotieanalyse in sollicitatiegesprekken", "Stemmingsdetectie bij werknemers"]
+          }
+        ]
+      },
+      "compliance_steps": [
+        {
+          "step": 1,
+          "action": "Audit recruitmenttools",
+          "detail": "Inventariseer alle AI in werving, selectie, HR-management"
+        },
+        {
+          "step": 2,
+          "action": "Verwijder emotieherkenning",
+          "detail": "Dit is VERBODEN vanaf 2 februari 2025"
+        },
+        {
+          "step": 3,
+          "action": "Controleer op bias",
+          "detail": "Test systemen op discriminatie naar geslacht, leeftijd, etniciteit"
+        },
+        {
+          "step": 4,
+          "action": "Informeer sollicitanten",
+          "detail": "Transparantieplicht over AI-gebruik in selectieproces"
+        },
+        {
+          "step": 5,
+          "action": "Behoud menselijke beslissing",
+          "detail": "Finaal oordeel door mens, AI mag alleen ondersteunen"
+        },
+        {
+          "step": 6,
+          "action": "Informeer OR",
+          "detail": "Ondernemingsraad heeft instemmingsrecht bij AI-systemen"
+        }
+      ],
+      "special_considerations": [
+        "WOR: Ondernemingsraad moet geconsulteerd worden",
+        "Discriminatiewetgeving (AWGB) blijft van toepassing",
+        "Platformwerk heeft specifieke regels (Richtlijn platformwerk)",
+        "AVG-rechten werknemers"
+      ],
+      "key_deadlines": {
+        "emotion_recognition_ban": "2 februari 2025",
+        "full_high_risk_compliance": "2 augustus 2026"
+      }
+    },
+    {
+      "sector_id": "education",
+      "sector_name": "Onderwijs",
+      "description": "Scholen, universiteiten, onderwijsplatforms en EdTech-bedrijven",
+      "risk_level": "Hoog-Risico",
+      "relevant_provisions": {
+        "high_risk_areas": [
+          {
+            "area": "Toegang tot onderwijs",
+            "annex": "Bijlage III, punt 3.1",
+            "examples": ["Selectie-algoritmen universiteiten", "Toelatingsprocedures", "Schoolkeuze-advies"]
+          },
+          {
+            "area": "Beoordeling leerresultaten",
+            "annex": "Bijlage III, punt 3.2",
+            "examples": ["Geautomatiseerd nakijken", "Essay-beoordeling", "Adaptieve leersystemen"]
+          },
+          {
+            "area": "Niveau-bepaling",
+            "annex": "Bijlage III, punt 3.3",
+            "examples": ["VMBO/HAVO/VWO advies", "Streaming naar onderwijsniveaus"],
+            "dutch_context": "CITO-toets en schooladvies-systemen vallen hieronder"
+          },
+          {
+            "area": "Examenmonitoring",
+            "annex": "Bijlage III, punt 3.4",
+            "examples": ["Proctoring software", "Plagiaat detectie", "Surveillance tijdens toetsen"]
+          }
+        ],
+        "prohibited_practices": [
+          {
+            "practice": "Emotieherkenning in onderwijs",
+            "article": "Artikel 5(1)(f)",
+            "description": "Volledig verboden bij leerlingen en studenten",
+            "examples": ["Aandachtsmonitoring via webcam", "Emotie-analyse in klas"]
+          }
+        ]
+      },
+      "compliance_steps": [
+        {
+          "step": 1,
+          "action": "Inventariseer EdTech",
+          "detail": "Breng alle AI-systemen in onderwijs in kaart"
+        },
+        {
+          "step": 2,
+          "action": "Stop emotieherkenning",
+          "detail": "Verwijder alle emotie/aandacht-monitoring systemen"
+        },
+        {
+          "step": 3,
+          "action": "Controleer proctoring tools",
+          "detail": "Zorg dat deze voldoen aan hoog-risico eisen"
+        },
+        {
+          "step": 4,
+          "action": "Transparantie naar ouders",
+          "detail": "Informeer ouders en leerlingen over AI-gebruik"
+        },
+        {
+          "step": 5,
+          "action": "Menselijke eindbeslissing",
+          "detail": "Docenten behouden finaal oordeel over prestaties"
+        }
+      ],
+      "special_considerations": [
+        "Minderjarigen zijn kwetsbare groep",
+        "Ouderlijke toestemming vaak vereist",
+        "Inspectie van het Onderwijs als toezichthouder",
+        "AVG-bescherming voor kinderen is extra streng"
+      ],
+      "key_deadlines": {
+        "emotion_recognition_ban": "2 februari 2025",
+        "full_high_risk_compliance": "2 augustus 2026"
+      }
+    },
+    {
+      "sector_id": "public_sector",
+      "sector_name": "Overheid & Publieke Sector",
+      "description": "Gemeenten, provincies, rijksoverheid, uitvoeringsorganisaties en semi-publieke instellingen",
+      "risk_level": "Vaak Hoog-Risico met extra verplichtingen",
+      "relevant_provisions": {
+        "high_risk_areas": [
+          {
+            "area": "Uitkeringen en toeslagen",
+            "annex": "Bijlage III, punt 5.1-5.2",
+            "examples": ["Bijstandsaanvragen", "Toeslagen-algoritmen", "WW/WIA beoordeling"],
+            "dutch_context": "Toeslagenaffaire toont risico's"
+          },
+          {
+            "area": "Fraude-opsporing",
+            "annex": "Bijlage III, punt 5.1",
+            "examples": ["Fraudedetectie sociale zekerheid", "Belastingfraude algoritmen"],
+            "note": "SyRI-affaire is waarschuwend voorbeeld"
+          },
+          {
+            "area": "Rechtshandhaving",
+            "annex": "Bijlage III, punt 6",
+            "examples": ["Predictive policing", "Risicotaxatie", "Profiling"]
+          },
+          {
+            "area": "Migratie en grenscontrole",
+            "annex": "Bijlage III, punt 7",
+            "examples": ["Asielbeoordelingen", "Visumaanvragen", "Grenscontrole"]
+          }
+        ],
+        "prohibited_practices": [
+          {
+            "practice": "Sociale scoring",
+            "article": "Artikel 5(1)(c)",
+            "description": "Absoluut verbod voor overheden op sociale scoring systemen"
+          },
+          {
+            "practice": "Crimineel risicoprofiling",
+            "article": "Artikel 5(1)(d)",
+            "description": "Verbod op voorspellen criminaliteit puur op basis van profiel"
+          },
+          {
+            "practice": "Real-time gezichtsherkenning",
+            "article": "Artikel 5(1)(h)",
+            "description": "Verboden in openbare ruimte, met zeer beperkte uitzonderingen voor ernstige misdrijven"
+          }
+        ],
+        "extra_obligations": [
+          {
+            "obligation": "FRIA verplicht",
+            "article": "Artikel 27",
+            "description": "Grondrechteneffectbeoordeling is verplicht voor alle overheids-AI"
+          },
+          {
+            "obligation": "Algoritmeregister",
+            "description": "Nederlandse overheid heeft Algoritmeregister.nl voor transparantie"
+          }
+        ]
+      },
+      "compliance_steps": [
+        {
+          "step": 1,
+          "action": "Audit algoritmes",
+          "detail": "Breng alle algoritmes in kaart (verplicht Algoritmeregister)"
+        },
+        {
+          "step": 2,
+          "action": "Controleer op verboden praktijken",
+          "detail": "Sociale scoring, predictive policing, biometrie"
+        },
+        {
+          "step": 3,
+          "action": "Voer FRIA uit",
+          "detail": "Grondrechteneffectbeoordeling voor alle hoog-risico AI"
+        },
+        {
+          "step": 4,
+          "action": "Publiceer in Algoritmeregister",
+          "detail": "Transparantieplicht voor overheidsalgoritmes"
+        },
+        {
+          "step": 5,
+          "action": "Implementeer IAMA",
+          "detail": "Impact Assessment Mensenrechten en Algoritmes"
+        },
+        {
+          "step": 6,
+          "action": "Stel bezwaarprocedures in",
+          "detail": "Burgers moeten beslissingen kunnen aanvechten"
+        }
+      ],
+      "dutch_specific": {
+        "algoritmeregister": "https://algoritmes.overheid.nl",
+        "iama": "Impact Assessment Mensenrechten en Algoritmes - verplicht instrument",
+        "toezichthouder": "Autoriteit Persoonsgegevens + sectorspecifieke toezichthouders",
+        "lessons_learned": [
+          "Toeslagenaffaire: discriminerende risicoprofielen",
+          "SyRI-zaak: onrechtmatige fraudeopsporing",
+          "Predictive policing Rotterdam: gestaakt wegens zorgen"
+        ]
+      },
+      "key_deadlines": {
+        "prohibited_practices": "2 februari 2025",
+        "full_high_risk_compliance": "2 augustus 2026"
+      }
+    },
+    {
+      "sector_id": "law_enforcement",
+      "sector_name": "Rechtshandhaving & Justitie",
+      "description": "Politie, OM, rechtbanken, gevangenisbeheer en beveiligingsdiensten",
+      "risk_level": "Hoog-Risico met extra restricties",
+      "relevant_provisions": {
+        "prohibited_practices": [
+          {
+            "practice": "Real-time biometrische identificatie",
+            "article": "Artikel 5(1)(h)",
+            "description": "Verboden in publieke ruimtes, uitzonderingen alleen voor:",
+            "exceptions": [
+              "Zoeken naar specifieke vermiste personen/slachtoffers",
+              "Voorkomen van terroristische aanslag",
+              "Opsporing plegers van ernstige misdrijven (Bijlage II)"
+            ],
+            "safeguards": [
+              "Voorafgaande rechterlijke machtiging vereist",
+              "Beperkt in tijd en geografisch bereik",
+              "Grondrechteneffectbeoordeling verplicht"
+            ]
+          },
+          {
+            "practice": "Crimineel risicoprofiling",
+            "article": "Artikel 5(1)(d)",
+            "description": "Verbod op voorspellen criminaliteit puur op basis van persoonlijkheidskenmerken"
+          }
+        ],
+        "high_risk_areas": [
+          {
+            "area": "Individuele risicobeoordeling",
+            "annex": "Bijlage III, punt 6.1",
+            "examples": ["Recidive-voorspelling", "Risicotaxatie voorlopige hechtenis"]
+          },
+          {
+            "area": "Leugendetectie",
+            "annex": "Bijlage III, punt 6.2",
+            "examples": ["AI-polygrafen", "Gedragsanalyse tijdens verhoor"]
+          },
+          {
+            "area": "Bewijsanalyse",
+            "annex": "Bijlage III, punt 6.3",
+            "examples": ["Forensische beeldanalyse", "DNA-matching"]
+          },
+          {
+            "area": "Criminaliteitsvoorspelling",
+            "annex": "Bijlage III, punt 6.4",
+            "examples": ["Predictive policing", "Hotspot analyse"],
+            "note": "Alleen toegestaan met strikte waarborgen"
+          },
+          {
+            "area": "Rechtspraakondersteuning",
+            "annex": "Bijlage III, punt 8.1",
+            "examples": ["Legal research tools", "Strafmaat-suggesties"]
+          }
+        ]
+      },
+      "compliance_steps": [
+        {
+          "step": 1,
+          "action": "Audit bestaande systemen",
+          "detail": "Inventariseer alle AI in opsporing, vervolging, rechtspraak"
+        },
+        {
+          "step": 2,
+          "action": "Controleer biometrie",
+          "detail": "Real-time gezichtsherkenning is vrijwel altijd verboden"
+        },
+        {
+          "step": 3,
+          "action": "Beoordeel predictive policing",
+          "detail": "Strenge eisen aan voorspellende systemen"
+        },
+        {
+          "step": 4,
+          "action": "Implementeer waarborgen",
+          "detail": "Rechterlijke machtiging, tijdslimieten, documentatie"
+        },
+        {
+          "step": 5,
+          "action": "Train personeel",
+          "detail": "Agenten en officieren moeten AI-beperkingen kennen"
+        }
+      ],
+      "special_considerations": [
+        "Europol en nationale politiediensten vallen onder specifieke regels",
+        "Recht op eerlijk proces moet gewaarborgd blijven",
+        "Onschuldpresumptie moet beschermd worden",
+        "Rechtelijke onafhankelijkheid mag niet aangetast worden"
+      ],
+      "key_deadlines": {
+        "prohibited_practices": "2 februari 2025",
+        "full_high_risk_compliance": "2 augustus 2026"
+      }
+    },
+    {
+      "sector_id": "tech_ai_providers",
+      "sector_name": "Technologie & AI-Aanbieders",
+      "description": "Softwarebedrijven, AI-startups, foundation model providers en cloud diensten",
+      "risk_level": "Afhankelijk van toepassing + GPAI-verplichtingen",
+      "relevant_provisions": {
+        "gpai_obligations": [
+          {
+            "category": "Alle GPAI-modellen",
+            "article": "Artikel 53",
+            "obligations": [
+              "Technische documentatie",
+              "Informatie aan downstream providers",
+              "Copyright compliance beleid",
+              "Samenvatting trainingsdata publiceren"
+            ]
+          },
+          {
+            "category": "GPAI met systemisch risico (>10^25 FLOPS)",
+            "article": "Artikel 55",
+            "additional_obligations": [
+              "Adversarial testing (red teaming)",
+              "Systemische risico-evaluatie",
+              "Incident tracking en rapportage",
+              "Cybersecurity maatregelen"
+            ]
+          }
+        ],
+        "provider_obligations": [
+          {
+            "article": "Artikel 16",
+            "obligations": [
+              "Kwaliteitsmanagementsysteem",
+              "Technische documentatie",
+              "Conformiteitsbeoordeling",
+              "CE-markering",
+              "Registratie EU-database",
+              "Post-market monitoring"
+            ]
+          }
+        ],
+        "open_source_exception": {
+          "applies_to": "Open source AI onder permissieve licentie",
+          "exception": "Uitgezonderd van meeste verplichtingen",
+          "unless": [
+            "Gebruikt in verboden praktijken",
+            "Hoog-risico AI-systemen",
+            "Transparantieverplichtingen (Artikel 50)",
+            "GPAI met systemisch risico"
+          ]
+        }
+      },
+      "compliance_steps": [
+        {
+          "step": 1,
+          "action": "Classificeer je AI",
+          "detail": "Bepaal of je GPAI, hoog-risico, of laag-risico AI maakt"
+        },
+        {
+          "step": 2,
+          "action": "Documenteer alles",
+          "detail": "Technische documentatie volgens Bijlage IV"
+        },
+        {
+          "step": 3,
+          "action": "Implementeer QMS",
+          "detail": "Kwaliteitsmanagementsysteem voor hoog-risico AI"
+        },
+        {
+          "step": 4,
+          "action": "Voer conformiteitsbeoordeling uit",
+          "detail": "Zelfbeoordeling of via notified body"
+        },
+        {
+          "step": 5,
+          "action": "Registreer in EU database",
+          "detail": "Verplicht voor hoog-risico AI"
+        },
+        {
+          "step": 6,
+          "action": "Setup post-market monitoring",
+          "detail": "Continu monitoren na lancering"
+        }
+      ],
+      "special_considerations": [
+        "Downstream liability: je bent verantwoordelijk voor hoe klanten jouw AI gebruiken",
+        "API-aanbieding maakt je vaak 'provider' onder AI Act",
+        "Copyright issues met trainingsdata",
+        "Codes of Practice als compliance-leidraad"
+      ],
+      "key_deadlines": {
+        "gpai_obligations": "2 augustus 2025",
+        "high_risk_full": "2 augustus 2026"
+      }
+    },
+    {
+      "sector_id": "retail_ecommerce",
+      "sector_name": "Retail & E-commerce",
+      "description": "Webshops, platforms, marketplaces en fysieke retail met AI",
+      "risk_level": "Meestal Laag tot Minimaal Risico met transparantieverplichtingen",
+      "relevant_provisions": {
+        "transparency_requirements": [
+          {
+            "area": "Chatbots",
+            "article": "Artikel 50(1)",
+            "requirement": "Klanten moeten weten dat ze met AI praten"
+          },
+          {
+            "area": "AI-gegenereerde content",
+            "article": "Artikel 50(2)",
+            "requirement": "Markeren als AI-gegenereerd"
+          }
+        ],
+        "potential_high_risk": [
+          {
+            "area": "Krediet bij aankoop (BNPL)",
+            "condition": "Als je zelf kredietwaardigheid beoordeelt",
+            "annex": "Bijlage III, punt 5.3"
+          },
+          {
+            "area": "HR-tools voor winkelpersoneel",
+            "condition": "Prestatiemonitoring, scheduling",
+            "annex": "Bijlage III, punt 4"
+          }
+        ],
+        "not_high_risk": [
+          "Productaanbevelingen",
+          "Dynamische prijsstelling (let op consumentenrecht)",
+          "Chatbots voor klantenservice",
+          "Voorraadoptimalisatie",
+          "Fraud detection in betalingen"
+        ]
+      },
+      "compliance_steps": [
+        {
+          "step": 1,
+          "action": "Inventariseer AI-toepassingen",
+          "detail": "Chatbots, recommenders, prijsalgoritmes"
+        },
+        {
+          "step": 2,
+          "action": "Label chatbots",
+          "detail": "Duidelijk aangeven dat klant met AI praat"
+        },
+        {
+          "step": 3,
+          "action": "Check BNPL-systemen",
+          "detail": "Kredietbeoordeling kan hoog-risico zijn"
+        },
+        {
+          "step": 4,
+          "action": "Markeer AI-content",
+          "detail": "AI-gegenereerde productbeschrijvingen labelen"
+        }
+      ],
+      "special_considerations": [
+        "Consumentenrecht (prijstransparantie) is apart",
+        "Platform-aansprakelijkheid (DSA) is aanvullend",
+        "Cookie/tracking wet blijft van toepassing",
+        "Dark patterns kunnen onder manipulatieverbod vallen"
+      ],
+      "key_deadlines": {
+        "transparency": "2 augustus 2025"
+      }
+    }
+  ],
+  "cross_sector_considerations": [
+    {
+      "topic": "AI-geletterdheid",
+      "article": "Artikel 4",
+      "applies_to": "Alle sectoren",
+      "deadline": "2 februari 2025",
+      "requirement": "Zorg dat personeel voldoende AI-kennis heeft"
+    },
+    {
+      "topic": "Transparantie chatbots",
+      "article": "Artikel 50(1)",
+      "applies_to": "Alle sectoren met klantcontact",
+      "deadline": "2 augustus 2025"
+    },
+    {
+      "topic": "Deepfake labeling",
+      "article": "Artikel 50(2)",
+      "applies_to": "Alle sectoren die AI-content genereren",
+      "deadline": "2 augustus 2025"
+    }
+  ]
+}
