@@ -1,38 +1,28 @@
-# Monitoring Scripts
+# Automatische Monitoring
 
-Automatische monitoring van EU AI Act bronnen.
+Elke dag om 9:00 (NL tijd) checkt een GitHub Action automatisch op nieuwe EU AI Act publicaties.
 
-## Opties
+## Hoe werkt het?
 
-### 1. GitHub Action (Aanbevolen)
+1. GitHub Action draait dagelijks
+2. Checkt AI Office nieuws pagina
+3. Vergelijkt met vorige check
+4. Als er iets nieuws is → maakt een GitHub Issue aan
 
-Automatisch actief in deze repo. Checkt wekelijks op maandag.
+## Melding ontvangen
 
-**Handmatig triggeren:**
-1. Ga naar Actions tab
+Je krijgt automatisch een melding via:
+- GitHub notificaties (als je "Watch" aan hebt staan op de repo)
+- Email (als je GitHub email notificaties aan hebt)
+
+## Handmatig checken
+
+1. Ga naar [Actions](../../actions)
 2. Selecteer "Monitor EU AI Act Sources"
 3. Klik "Run workflow"
 
-### 2. n8n Workflow
+## Wat wordt gecheckt?
 
-Importeer `n8n-monitoring-workflow.json` in je n8n instance.
-
-**Setup:**
-1. Importeer workflow in n8n
-2. Configureer GitHub credentials
-3. (Optioneel) Configureer Slack webhook
-4. Activeer workflow
-
-## Wat wordt gemonitord?
-
-| Bron | URL | Frequentie |
-|------|-----|------------|
-| AI Office News | digital-strategy.ec.europa.eu | Wekelijks |
-| EUR-Lex Updates | eur-lex.europa.eu | Wekelijks |
-
-## Output
-
-Bij nieuwe publicaties:
-- GitHub Issue wordt aangemaakt
-- (Optioneel) Slack notificatie
-- (Optioneel) Email notificatie
+| Bron | Frequentie |
+|------|------------|
+| [AI Office News](https://digital-strategy.ec.europa.eu/en/news?topic=135) | Dagelijks |
