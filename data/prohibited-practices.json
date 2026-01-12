@@ -1,0 +1,76 @@
+{
+  "document_info": {
+    "title": "EU AI Act - Prohibited AI Practices (Article 5)",
+    "regulation": "Regulation (EU) 2024/1689",
+    "celex_number": "32024R1689",
+    "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32024R1689",
+    "effective_date": "2025-02-02",
+    "last_updated": "2026-01-12"
+  },
+  "prohibited_practices": [
+    {
+      "id": "5-1-a",
+      "category": "Manipulative and Deceptive AI Techniques",
+      "article_reference": "Article 5(1)(a)",
+      "effective_date": "2025-02-02",
+      "description": "AI systems deploying subliminal techniques or manipulative/deceptive techniques to materially distort behavior causing significant harm",
+      "penalties": "Up to EUR 35 million or 7% of worldwide annual turnover"
+    },
+    {
+      "id": "5-1-b",
+      "category": "Exploitation of Vulnerabilities",
+      "article_reference": "Article 5(1)(b)",
+      "effective_date": "2025-02-02",
+      "description": "AI systems exploiting vulnerabilities due to age, disability, or social/economic situation",
+      "penalties": "Up to EUR 35 million or 7% of worldwide annual turnover"
+    },
+    {
+      "id": "5-1-c",
+      "category": "Social Scoring",
+      "article_reference": "Article 5(1)(c)",
+      "effective_date": "2025-02-02",
+      "description": "AI systems for social scoring leading to detrimental treatment",
+      "penalties": "Up to EUR 35 million or 7% of worldwide annual turnover"
+    },
+    {
+      "id": "5-1-d",
+      "category": "Criminal Risk Profiling",
+      "article_reference": "Article 5(1)(d)",
+      "effective_date": "2025-02-02",
+      "description": "AI systems predicting criminality based solely on profiling",
+      "penalties": "Up to EUR 35 million or 7% of worldwide annual turnover"
+    },
+    {
+      "id": "5-1-e",
+      "category": "Untargeted Facial Scraping",
+      "article_reference": "Article 5(1)(e)",
+      "effective_date": "2025-02-02",
+      "description": "Creating facial recognition databases through untargeted scraping",
+      "penalties": "Up to EUR 35 million or 7% of worldwide annual turnover"
+    },
+    {
+      "id": "5-1-f",
+      "category": "Emotion Recognition in Workplace/Education",
+      "article_reference": "Article 5(1)(f)",
+      "effective_date": "2025-02-02",
+      "description": "AI systems inferring emotions in workplace/educational settings (except medical/safety)",
+      "penalties": "Up to EUR 35 million or 7% of worldwide annual turnover"
+    },
+    {
+      "id": "5-1-g",
+      "category": "Biometric Categorization",
+      "article_reference": "Article 5(1)(g)",
+      "effective_date": "2025-02-02",
+      "description": "AI systems categorizing persons by biometrics to infer protected characteristics",
+      "penalties": "Up to EUR 35 million or 7% of worldwide annual turnover"
+    },
+    {
+      "id": "5-1-h",
+      "category": "Real-Time Biometric ID in Public Spaces",
+      "article_reference": "Article 5(1)(h)",
+      "effective_date": "2025-02-02",
+      "description": "Real-time remote biometric identification in public spaces for law enforcement (with narrow exceptions)",
+      "penalties": "Up to EUR 35 million or 7% of worldwide annual turnover"
+    }
+  ]
+}

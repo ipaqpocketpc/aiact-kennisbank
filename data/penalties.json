@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "regulation": "EU AI Act",
+    "articles": ["Article 99", "Article 100", "Article 101"]
+  },
+  "penalty_tiers": [
+    {
+      "tier": 1,
+      "violation": "Prohibited AI practices (Article 5)",
+      "max_percentage": "7%",
+      "max_amount": "EUR 35 million",
+      "calculation": "Whichever is HIGHER"
+    },
+    {
+      "tier": 2,
+      "violation": "Operator/notified body obligations",
+      "max_percentage": "3%",
+      "max_amount": "EUR 15 million",
+      "calculation": "Whichever is HIGHER"
+    },
+    {
+      "tier": 3,
+      "violation": "False information supply",
+      "max_percentage": "1%",
+      "max_amount": "EUR 7.5 million",
+      "calculation": "Whichever is HIGHER"
+    }
+  ],
+  "sme_protection": {
+    "description": "For SMEs/startups: whichever is LOWER applies (ceiling effect)",
+    "article": "99(6)"
+  },
+  "gpai_penalties": {
+    "max_percentage": "3%",
+    "max_amount": "EUR 15 million",
+    "authority": "European Commission"
+  },
+  "union_institution_penalties": {
+    "prohibited_practices": "EUR 1.5 million",
+    "other_violations": "EUR 750,000",
+    "authority": "EDPS"
+  },
+  "enforcement_authorities": {
+    "standard": "National competent authorities",
+    "gpai": "European Commission",
+    "union": "EDPS"
+  }
+}

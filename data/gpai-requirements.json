@@ -1,0 +1,36 @@
+{
+  "metadata": {
+    "title": "General-Purpose AI (GPAI) Model Requirements",
+    "regulation": "Regulation (EU) 2024/1689",
+    "effective_date": "2025-08-02"
+  },
+  "systemic_risk_threshold": {
+    "flops": "10^25",
+    "description": "Models trained with >10^25 FLOPS are presumed to have systemic risk"
+  },
+  "all_gpai_obligations": [
+    {"article": "53(1)(a)", "requirement": "Technical documentation (Annex XI)"},
+    {"article": "53(1)(b)", "requirement": "Downstream provider information (Annex XII)"},
+    {"article": "53(1)(c)", "requirement": "Copyright compliance policy"},
+    {"article": "53(1)(d)", "requirement": "Training data summary (public)"}
+  ],
+  "systemic_risk_additional": [
+    {"article": "55(1)(a)", "requirement": "Model evaluation and adversarial testing"},
+    {"article": "55(1)(b)", "requirement": "Systemic risk assessment at EU level"},
+    {"article": "55(1)(c)", "requirement": "Incident tracking and reporting to AI Office"},
+    {"article": "55(1)(d)", "requirement": "Cybersecurity protection"}
+  ],
+  "transparency": {
+    "article": "50",
+    "requirement": "Mark synthetic content (audio, image, video, text) as AI-generated"
+  },
+  "open_source_exemptions": {
+    "exempt_from": ["Technical documentation", "Downstream info"],
+    "NOT_exempt_from": ["Copyright compliance", "Training data summary"],
+    "note": "No exemption if systemic risk"
+  },
+  "penalties": {
+    "max_percentage": "3%",
+    "max_amount": "EUR 15 million"
+  }
+}

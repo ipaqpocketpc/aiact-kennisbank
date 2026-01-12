@@ -1,0 +1,51 @@
+{
+  "metadata": {
+    "regulation": "EU AI Act (Regulation 2024/1689)",
+    "annex": "ANNEX III",
+    "title": "High-Risk AI Systems",
+    "effective_date": "2026-08-02"
+  },
+  "high_risk_areas": [
+    {
+      "area_number": 1,
+      "area_name": "Biometrics",
+      "use_cases": ["Remote biometric identification", "Biometric categorization", "Emotion recognition"]
+    },
+    {
+      "area_number": 2,
+      "area_name": "Critical Infrastructure",
+      "use_cases": ["Critical digital infrastructure", "Road traffic management", "Utility supply management"]
+    },
+    {
+      "area_number": 3,
+      "area_name": "Education",
+      "use_cases": ["Educational access/admission", "Program assignment", "Learning evaluation", "Level assessment", "Test monitoring"]
+    },
+    {
+      "area_number": 4,
+      "area_name": "Employment",
+      "use_cases": ["Recruitment", "Job ads", "Application filtering", "Candidate evaluation", "Contract decisions", "Promotion/termination", "Task allocation", "Performance monitoring"]
+    },
+    {
+      "area_number": 5,
+      "area_name": "Essential Services",
+      "use_cases": ["Public benefits eligibility", "Healthcare access", "Social security", "Credit scoring", "Insurance risk", "Emergency calls", "Emergency dispatching", "Patient triage"]
+    },
+    {
+      "area_number": 6,
+      "area_name": "Law Enforcement",
+      "use_cases": ["Victim risk assessment", "Polygraphs", "Evidence evaluation", "Reoffending risk", "Profiling"]
+    },
+    {
+      "area_number": 7,
+      "area_name": "Migration/Border",
+      "use_cases": ["Migration polygraphs", "Risk assessment", "Application examination", "Eligibility assessment", "Person identification"]
+    },
+    {
+      "area_number": 8,
+      "area_name": "Justice/Democracy",
+      "use_cases": ["Judicial research", "Law application", "Alternative dispute resolution", "Election influence", "Voting behavior influence"]
+    }
+  ],
+  "provider_requirements": ["Risk management (Art. 9)", "Data governance (Art. 10)", "Technical documentation (Art. 11)", "Record-keeping (Art. 12)", "Transparency (Art. 13)", "Human oversight (Art. 14)", "Accuracy/robustness (Art. 15)", "Quality management (Art. 17)"]
+}
