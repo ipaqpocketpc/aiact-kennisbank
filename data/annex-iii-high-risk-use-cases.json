@@ -1,0 +1,476 @@
+{
+  "metadata": {
+    "regulation": "EU AI Act",
+    "regulation_id": "CELEX:32024R1689",
+    "annex": "Annex III",
+    "title": "High-Risk AI Systems Referred to in Article 6(2)",
+    "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32024R1689",
+    "extracted_date": "2026-01-12",
+    "description": "Lijst van specifieke AI-toepassingen die automatisch als hoog-risico worden geclassificeerd"
+  },
+  "areas": [
+    {
+      "area_number": 1,
+      "area_name": "Biometrics",
+      "area_name_nl": "Biometrie",
+      "description": "Biometrische identificatie en categorisatie van natuurlijke personen",
+      "use_cases": [
+        {
+          "id": "1.1",
+          "use_case": "Remote biometric identification systems",
+          "use_case_nl": "Biometrische identificatiesystemen op afstand",
+          "description": "AI-systemen bedoeld voor biometrische identificatie op afstand van natuurlijke personen, met uitzondering van systemen voor verificatie (bevestiging identiteit)",
+          "scope": "Zowel real-time als post-identificatie systemen",
+          "exceptions": [
+            "Biometrische verificatie (bevestigen dat iemand is wie hij zegt te zijn)",
+            "Systemen uitsluitend gebruikt voor beveiliging van gebouwen (onder voorwaarden)"
+          ],
+          "examples": [
+            "Gezichtsherkenning in openbare ruimtes",
+            "Identificatie via irisscans op afstand",
+            "Stemherkenning voor identificatiedoeleinden"
+          ],
+          "risk_rationale": "Inbreuk op privacy en recht op bescherming persoonsgegevens"
+        },
+        {
+          "id": "1.2",
+          "use_case": "Biometric categorisation systems",
+          "use_case_nl": "Biometrische categorisatiesystemen",
+          "description": "AI-systemen bedoeld voor het categoriseren van natuurlijke personen op basis van biometrische gegevens naar geslacht, leeftijd, haarkleur, oogkleur, tatoeages, etnische achtergrond, etc.",
+          "scope": "Alle systemen die personen indelen in groepen op basis van fysieke kenmerken",
+          "exceptions": [
+            "Labelen of filteren van rechtmatig verkregen biometrische datasets",
+            "Categorisatie in rechtshandhaving (onder specifieke voorwaarden)"
+          ],
+          "examples": [
+            "Leeftijdsschatting voor toegangscontrole",
+            "Geslachtsbepaling voor marketingdoeleinden",
+            "Etnische profilering"
+          ],
+          "risk_rationale": "Risico op discriminatie en inbreuk op menselijke waardigheid"
+        },
+        {
+          "id": "1.3",
+          "use_case": "Emotion recognition systems",
+          "use_case_nl": "Emotieherkenningssystemen",
+          "description": "AI-systemen bedoeld voor het afleiden van emoties van natuurlijke personen",
+          "scope": "Systemen die emotionele toestanden proberen te detecteren of analyseren",
+          "exceptions": [
+            "Medische doeleinden (met expliciete toestemming)",
+            "Veiligheidsdoeleinden (bijv. detectie vermoeidheid bestuurders)"
+          ],
+          "examples": [
+            "Emotieanalyse tijdens sollicitatiegesprekken",
+            "Sentimentanalyse van gezichtsuitdrukkingen",
+            "Stressdetectie via stemanalyse"
+          ],
+          "risk_rationale": "Wetenschappelijke onzekerheid en risico op discriminatie",
+          "note": "In werkgelegenheid en onderwijs is emotieherkenning VERBODEN (Artikel 5)"
+        }
+      ]
+    },
+    {
+      "area_number": 2,
+      "area_name": "Critical Infrastructure",
+      "area_name_nl": "Kritieke Infrastructuur",
+      "description": "AI-systemen als veiligheidscomponenten in het beheer en de exploitatie van kritieke infrastructuur",
+      "use_cases": [
+        {
+          "id": "2.1",
+          "use_case": "Safety components in critical digital infrastructure",
+          "use_case_nl": "Veiligheidscomponenten in kritieke digitale infrastructuur",
+          "description": "AI-systemen die fungeren als veiligheidscomponent bij het beheer van kritieke digitale infrastructuur",
+          "examples": [
+            "AI voor netwerkbeheer van datacenters",
+            "Cybersecurity systemen voor kritieke netwerken",
+            "Load balancing voor essentiële diensten"
+          ],
+          "risk_rationale": "Uitval kan grote maatschappelijke impact hebben"
+        },
+        {
+          "id": "2.2",
+          "use_case": "Safety components in road traffic",
+          "use_case_nl": "Veiligheidscomponenten in wegverkeer",
+          "description": "AI-systemen als veiligheidscomponent voor het beheer van wegverkeer en levering van water, gas, verwarming en elektriciteit",
+          "examples": [
+            "Verkeersmanagementsystemen",
+            "Smart grid beheer",
+            "Waterdistributiebeheer",
+            "Gasnetwerk monitoring"
+          ],
+          "risk_rationale": "Direct risico voor leven en gezondheid bij falen"
+        }
+      ]
+    },
+    {
+      "area_number": 3,
+      "area_name": "Education and Vocational Training",
+      "area_name_nl": "Onderwijs en Beroepsopleiding",
+      "description": "AI-systemen in onderwijs die bepalend zijn voor toegang, prestaties en loopbaankeuzes",
+      "use_cases": [
+        {
+          "id": "3.1",
+          "use_case": "Determining access to education",
+          "use_case_nl": "Bepalen toegang tot onderwijs",
+          "description": "AI-systemen voor het bepalen van toegang of toelating tot onderwijs- en beroepsopleidingsinstellingen op alle niveaus",
+          "examples": [
+            "Geautomatiseerde selectie voor universiteiten",
+            "AI-gestuurde toelatingsprocedures",
+            "Algoritmen voor schoolkeuze-advies"
+          ],
+          "risk_rationale": "Kan levenslange gevolgen hebben voor onderwijskansen"
+        },
+        {
+          "id": "3.2",
+          "use_case": "Evaluating learning outcomes",
+          "use_case_nl": "Evalueren van leerresultaten",
+          "description": "AI-systemen voor het evalueren van leerresultaten, inclusief wanneer deze worden gebruikt om het onderwijsproces te sturen",
+          "examples": [
+            "Geautomatiseerd nakijken van tentamens",
+            "AI-gestuurde beoordeling van essays",
+            "Adaptieve leersystemen die voortgang beoordelen"
+          ],
+          "risk_rationale": "Directe impact op diploma's en kwalificaties"
+        },
+        {
+          "id": "3.3",
+          "use_case": "Assessing appropriate level of education",
+          "use_case_nl": "Bepalen geschikt onderwijsniveau",
+          "description": "AI-systemen voor het beoordelen van het geschikte onderwijsniveau voor een persoon",
+          "examples": [
+            "Niveau-bepaling voor leerlingen",
+            "Streaming naar verschillende onderwijsniveaus",
+            "VMBO/HAVO/VWO advies-algoritmen"
+          ],
+          "risk_rationale": "Kan leiden tot self-fulfilling prophecies en ongelijke kansen"
+        },
+        {
+          "id": "3.4",
+          "use_case": "Monitoring and detecting prohibited behavior",
+          "use_case_nl": "Monitoren en detecteren van ongeoorloofd gedrag",
+          "description": "AI-systemen voor het monitoren en detecteren van ongeoorloofd gedrag van studenten tijdens examens",
+          "examples": [
+            "Proctoring software voor online examens",
+            "Plagiaat detectie",
+            "Surveillance tijdens toetsen"
+          ],
+          "risk_rationale": "Privacy-inbreuk en mogelijke discriminatie"
+        }
+      ]
+    },
+    {
+      "area_number": 4,
+      "area_name": "Employment, Workers Management and Access to Self-Employment",
+      "area_name_nl": "Werkgelegenheid, Personeelsbeheer en Toegang tot Zelfstandig Ondernemerschap",
+      "description": "AI-systemen die invloed hebben op arbeidsrelaties en carrièremogelijkheden",
+      "use_cases": [
+        {
+          "id": "4.1",
+          "use_case": "Recruitment and selection",
+          "use_case_nl": "Werving en selectie",
+          "description": "AI-systemen voor het werven of selecteren van sollicitanten, met name voor gerichte vacatures, screening en filtering",
+          "examples": [
+            "CV-screening algoritmen",
+            "Geautomatiseerde sollicitantenselectie",
+            "AI-gestuurde matching platforms",
+            "Video-interview analyse"
+          ],
+          "risk_rationale": "Risico op discriminatie bij aannamebeslissingen"
+        },
+        {
+          "id": "4.2",
+          "use_case": "Decisions affecting work relationship",
+          "use_case_nl": "Beslissingen over arbeidsrelatie",
+          "description": "AI-systemen voor het nemen van beslissingen die de arbeidsrelatie beïnvloeden, zoals promotie, beëindiging, taaktoewijzing",
+          "examples": [
+            "Geautomatiseerde prestatiebeoordeling",
+            "Promotie-algoritmen",
+            "Automatische ontslagbeslissingen",
+            "Shift scheduling systemen",
+            "Taaktoewijzing bij platformwerk"
+          ],
+          "risk_rationale": "Directe impact op inkomen en carrière"
+        },
+        {
+          "id": "4.3",
+          "use_case": "Monitoring and evaluating performance",
+          "use_case_nl": "Monitoren en evalueren van prestaties",
+          "description": "AI-systemen voor het monitoren en evalueren van prestaties en gedrag van werknemers",
+          "examples": [
+            "Productiviteitsmonitoring software",
+            "Keystroke logging met AI-analyse",
+            "Warehouse worker tracking",
+            "Call center monitoring"
+          ],
+          "risk_rationale": "Privacy-inbreuk en psychologische druk op werknemers"
+        }
+      ]
+    },
+    {
+      "area_number": 5,
+      "area_name": "Access to Essential Private and Public Services",
+      "area_name_nl": "Toegang tot Essentiële Privé- en Overheidsdiensten",
+      "description": "AI-systemen die toegang tot essentiële diensten en uitkeringen bepalen",
+      "use_cases": [
+        {
+          "id": "5.1",
+          "use_case": "Evaluating eligibility for public benefits",
+          "use_case_nl": "Beoordelen recht op publieke uitkeringen",
+          "description": "AI-systemen voor het beoordelen van de geschiktheid van personen voor publieke uitkeringen en diensten",
+          "examples": [
+            "Algoritmen voor bijstandsaanvragen",
+            "Automatische beoordeling WIA/WW",
+            "Toeslagen-algoritmen",
+            "Fraude-detectie in sociale zekerheid"
+          ],
+          "risk_rationale": "Directe impact op bestaanszekerheid kwetsbare groepen",
+          "dutch_example": "SyRI-affaire en toeslagenschandaal tonen risico's"
+        },
+        {
+          "id": "5.2",
+          "use_case": "Granting, reducing or revoking benefits",
+          "use_case_nl": "Toekennen, verminderen of intrekken van uitkeringen",
+          "description": "AI-systemen voor het toekennen, verminderen, intrekken of terugvorderen van uitkeringen",
+          "examples": [
+            "Geautomatiseerde beschikkingen",
+            "Terugvorderingsalgoritmen",
+            "Sanctie-systemen"
+          ],
+          "risk_rationale": "Kan leiden tot onterechte schulden en armoede"
+        },
+        {
+          "id": "5.3",
+          "use_case": "Creditworthiness assessment",
+          "use_case_nl": "Kredietwaardigheidsbeoordelingen",
+          "description": "AI-systemen voor het beoordelen van de kredietwaardigheid van natuurlijke personen, met uitzondering van fraude-detectie",
+          "examples": [
+            "Credit scoring modellen",
+            "Hypotheek-beslissingsalgoritmen",
+            "Consumptief krediet beoordeling",
+            "Buy-now-pay-later algoritmen"
+          ],
+          "risk_rationale": "Kan toegang tot financiële diensten uitsluiten",
+          "exception": "Fraude-detectie valt niet onder hoog-risico"
+        },
+        {
+          "id": "5.4",
+          "use_case": "Risk assessment and pricing in insurance",
+          "use_case_nl": "Risicobeoordeling en prijsstelling voor verzekeringen",
+          "description": "AI-systemen voor risicobeoordeling en prijsstelling voor levens- en ziektekostenverzekeringen",
+          "examples": [
+            "Premieberekening levensverzekering",
+            "Risico-inschatting zorgverzekering",
+            "Acceptatiebeleid verzekeringen"
+          ],
+          "risk_rationale": "Kan leiden tot uitsluiting van verzekeringsdekking",
+          "scope": "Alleen levens- en ziektekostenverzekeringen, niet autoverzekering etc."
+        },
+        {
+          "id": "5.5",
+          "use_case": "Emergency services dispatch",
+          "use_case_nl": "Uitzending van nooddiensten",
+          "description": "AI-systemen voor het evalueren en classificeren van noodoproepen of dispatchen van nooddiensten",
+          "examples": [
+            "112-meldkamer triagesystemen",
+            "Ambulance dispatching",
+            "Prioritering brandweer",
+            "Politie resource allocatie"
+          ],
+          "risk_rationale": "Directe impact op veiligheid en leven"
+        }
+      ]
+    },
+    {
+      "area_number": 6,
+      "area_name": "Law Enforcement",
+      "area_name_nl": "Rechtshandhaving",
+      "description": "AI-systemen gebruikt door rechtshandhavingsautoriteiten",
+      "use_cases": [
+        {
+          "id": "6.1",
+          "use_case": "Individual risk assessment",
+          "use_case_nl": "Individuele risicobeoordeling",
+          "description": "AI-systemen voor individuele risicobeoordeling voor het plegen of recidiveren van strafbare feiten",
+          "examples": [
+            "Recidive-voorspelling",
+            "Risicotaxatie-instrumenten",
+            "Pre-trial detention beslissingen"
+          ],
+          "risk_rationale": "Risico op discriminatie en self-fulfilling prophecy"
+        },
+        {
+          "id": "6.2",
+          "use_case": "Polygraphs and similar tools",
+          "use_case_nl": "Leugendetectoren en vergelijkbare instrumenten",
+          "description": "AI-systemen als polygrafen of vergelijkbare instrumenten voor het detecteren van de emotionele staat of betrouwbaarheid",
+          "examples": [
+            "AI-leugendetectie",
+            "Gedragsanalyse tijdens verhoor",
+            "Stressdetectie bij verdachten"
+          ],
+          "risk_rationale": "Wetenschappelijke onbetrouwbaarheid en druk op verdachten"
+        },
+        {
+          "id": "6.3",
+          "use_case": "Evaluating reliability of evidence",
+          "use_case_nl": "Beoordelen betrouwbaarheid bewijsmateriaal",
+          "description": "AI-systemen voor het beoordelen van de betrouwbaarheid van bewijsmateriaal in strafrechtelijke onderzoeken",
+          "examples": [
+            "Forensische beeldanalyse",
+            "DNA-matching algoritmen",
+            "Digitale bewijsanalyse"
+          ],
+          "risk_rationale": "Directe impact op rechtspraak en vrijheid"
+        },
+        {
+          "id": "6.4",
+          "use_case": "Predicting crimes",
+          "use_case_nl": "Voorspellen van misdrijven",
+          "description": "AI-systemen voor het voorspellen van het plegen of recidiveren van strafbare feiten op basis van profilering",
+          "examples": [
+            "Predictive policing",
+            "Hotspot-voorspelling",
+            "Individuele criminaliteitsvoorspelling"
+          ],
+          "risk_rationale": "Risico op discriminatie en verstevigen bestaande patronen"
+        },
+        {
+          "id": "6.5",
+          "use_case": "Profiling during investigation",
+          "use_case_nl": "Profilering tijdens onderzoek",
+          "description": "AI-systemen voor het profileren van personen tijdens opsporing, vervolging of tenuitvoerlegging van straffen",
+          "examples": [
+            "Verdachtenprofilering",
+            "Criminele netwerkanalyse",
+            "Patroonherkenning in gedrag"
+          ],
+          "risk_rationale": "Risico op onterechte verdenkingen"
+        },
+        {
+          "id": "6.6",
+          "use_case": "Crime analytics",
+          "use_case_nl": "Misdaadanalyse",
+          "description": "AI-systemen voor misdaadanalyse met betrekking tot natuurlijke personen ter ondersteuning van onderzoek",
+          "examples": [
+            "Sociale netwerkanalyse van verdachten",
+            "Patroonherkenning in financiele transacties",
+            "Locatie- en bewegingsanalyse"
+          ],
+          "risk_rationale": "Privacy-inbreuk en mogelijke discriminatie"
+        }
+      ]
+    },
+    {
+      "area_number": 7,
+      "area_name": "Migration, Asylum and Border Control Management",
+      "area_name_nl": "Migratie, Asiel en Grensbeheer",
+      "description": "AI-systemen in het kader van migratie en grensbewaking",
+      "use_cases": [
+        {
+          "id": "7.1",
+          "use_case": "Polygraphs for migration",
+          "use_case_nl": "Leugendetectoren voor migratie",
+          "description": "AI-systemen als polygrafen of vergelijkbare instrumenten bij migratie en asiel",
+          "examples": [
+            "Geloofwaardigheidsbeoordeling asielzoekers",
+            "Emotiedetectie bij grenscontrole"
+          ],
+          "risk_rationale": "Kwetsbare personen, taalbarrières, stress"
+        },
+        {
+          "id": "7.2",
+          "use_case": "Risk assessment for migration",
+          "use_case_nl": "Risicobeoordeling voor migratie",
+          "description": "AI-systemen voor risicobeoordeling met betrekking tot irreguliere migratie, veiligheid of gezondheid",
+          "examples": [
+            "Risicoprofilering aan grenzen",
+            "Veiligheidsscreening migranten",
+            "Reisrisico-beoordeling"
+          ],
+          "risk_rationale": "Risico op discriminatie en onterechte weigering"
+        },
+        {
+          "id": "7.3",
+          "use_case": "Examining applications",
+          "use_case_nl": "Beoordelen van aanvragen",
+          "description": "AI-systemen voor het onderzoeken van asiel-, visum- en verblijfsaanvragen",
+          "examples": [
+            "Geautomatiseerde asielbeoordelingen",
+            "Visumaanvraag-analyse",
+            "Documentverificatie"
+          ],
+          "risk_rationale": "Directe impact op bescherming vluchtelingen"
+        },
+        {
+          "id": "7.4",
+          "use_case": "Detection and identification of migrants",
+          "use_case_nl": "Detectie en identificatie van migranten",
+          "description": "AI-systemen voor het detecteren, herkennen of identificeren van migranten, met uitzondering van documentverificatie",
+          "examples": [
+            "Gezichtsherkenning aan grenzen",
+            "Detectie van irreguliere grensoverschrijding",
+            "Identificatie van personen zonder documenten"
+          ],
+          "risk_rationale": "Privacy en waardigheid kwetsbare groepen"
+        }
+      ]
+    },
+    {
+      "area_number": 8,
+      "area_name": "Administration of Justice and Democratic Processes",
+      "area_name_nl": "Rechtspraak en Democratische Processen",
+      "description": "AI-systemen die de rechtspraak of democratie kunnen beïnvloeden",
+      "use_cases": [
+        {
+          "id": "8.1",
+          "use_case": "Assisting judicial authorities",
+          "use_case_nl": "Ondersteuning rechterlijke autoriteiten",
+          "description": "AI-systemen bedoeld om rechterlijke autoriteiten te helpen bij het onderzoeken en interpreteren van feiten en recht en bij het toepassen van recht op concrete feiten",
+          "examples": [
+            "Legal research tools met AI",
+            "Precedent-analyse systemen",
+            "Strafmaat-suggestie algoritmen",
+            "Juridische besluitondersteunende systemen"
+          ],
+          "risk_rationale": "Onafhankelijkheid rechtspraak en recht op eerlijk proces",
+          "note": "Puur administratieve taken vallen hierbuiten"
+        },
+        {
+          "id": "8.2",
+          "use_case": "Influencing election outcomes",
+          "use_case_nl": "Beïnvloeden verkiezingsuitkomsten",
+          "description": "AI-systemen bedoeld om verkiezingsuitkomsten of stemgedrag te beïnvloeden, exclusief organisatorische tools",
+          "examples": [
+            "Microtargeting voor politieke campagnes",
+            "AI-gestuurde kiezersbeinvloeding",
+            "Gepersonaliseerde politieke content"
+          ],
+          "risk_rationale": "Bescherming democratisch proces",
+          "exception": "Puur organisatorische tools (planning, logistiek) vallen hierbuiten"
+        }
+      ]
+    }
+  ],
+  "important_notes": {
+    "article_6_3_exception": {
+      "description": "AI-systemen in Bijlage III zijn NIET hoog-risico als ze geen significant risico vormen voor gezondheid, veiligheid of grondrechten",
+      "conditions": [
+        "Het systeem voert een beperkte procedurele taak uit",
+        "Het systeem verbetert alleen het resultaat van een eerder voltooide menselijke activiteit",
+        "Het systeem detecteert beslissingspatronen zonder menselijke beoordeling te vervangen",
+        "Het systeem voert alleen voorbereidende taken uit voor de beoordeling in Bijlage III"
+      ],
+      "documentation_requirement": "Aanbieder moet documenteren waarom het systeem niet als hoog-risico wordt beschouwd"
+    },
+    "updates": {
+      "mechanism": "De Commissie kan Bijlage III updaten via gedelegeerde handelingen",
+      "criteria": "Nieuwe use cases kunnen worden toegevoegd als ze vergelijkbare risico's vormen als bestaande"
+    }
+  },
+  "cross_references": {
+    "article_5": "Sommige toepassingen zijn volledig VERBODEN (bijv. emotieherkenning op werk/school)",
+    "article_6": "Definieert wanneer een AI-systeem als hoog-risico wordt geclassificeerd",
+    "article_26": "Deployer-verplichtingen voor hoog-risico systemen",
+    "annex_i": "Hoog-risico via EU-productregelgeving (alternatieve route)"
+  }
+}
