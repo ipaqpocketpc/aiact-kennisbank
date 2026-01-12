@@ -1,0 +1,597 @@
+{
+  "metadata": {
+    "regulation": "EU AI Act",
+    "regulation_id": "CELEX:32024R1689",
+    "total_articles": 113,
+    "total_chapters": 13,
+    "source_url": "https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:32024R1689",
+    "extracted_date": "2026-01-12"
+  },
+  "chapters": [
+    {
+      "chapter": 1,
+      "title": "General Provisions",
+      "title_nl": "Algemene Bepalingen",
+      "articles": "1-4",
+      "key_articles": [
+        {
+          "article": 1,
+          "title": "Subject Matter",
+          "title_nl": "Onderwerp",
+          "summary": "Definieert het doel van de verordening: bevorderen van mensgerichte AI, bescherming van grondrechten, en harmonisatie van regels in de EU.",
+          "key_points": [
+            "Uniforme regels voor AI in de EU",
+            "Verboden AI-praktijken",
+            "Specifieke eisen voor hoog-risico AI",
+            "Transparantieverplichtingen",
+            "Regels voor GPAI-modellen",
+            "Governance en handhaving"
+          ]
+        },
+        {
+          "article": 2,
+          "title": "Scope",
+          "title_nl": "Toepassingsgebied",
+          "summary": "Bepaalt op wie de verordening van toepassing is en welke uitzonderingen er gelden.",
+          "key_points": [
+            "Van toepassing op aanbieders, importeurs, distributeurs, gebruikers in EU",
+            "Extraterritoriale werking (ook aanbieders buiten EU)",
+            "NIET van toepassing op: militair/defensie, internationale organisaties, R&D, persoonlijk gebruik",
+            "Speciale regels voor rechtshandhaving"
+          ],
+          "exclusions": [
+            "Puur militaire of defensiedoeleinden",
+            "Wetenschappelijk onderzoek",
+            "Systemen uitsluitend voor persoonlijk niet-professioneel gebruik",
+            "Open source AI (met uitzonderingen)"
+          ]
+        },
+        {
+          "article": 3,
+          "title": "Definitions",
+          "title_nl": "Definities",
+          "summary": "Bevat 68 definities die cruciaal zijn voor interpretatie van de wet.",
+          "key_definitions": [
+            {
+              "term": "AI system",
+              "summary": "Machine-gebaseerd systeem dat met enige autonomie opereert en outputs genereert"
+            },
+            {
+              "term": "Provider",
+              "summary": "Ontwikkelaar of in-de-handel-brenger van AI-systeem"
+            },
+            {
+              "term": "Deployer",
+              "summary": "Gebruiker van AI-systeem onder eigen autoriteit"
+            },
+            {
+              "term": "High-risk AI system",
+              "summary": "AI-systeem dat significant risico vormt voor gezondheid, veiligheid of grondrechten"
+            }
+          ]
+        },
+        {
+          "article": 4,
+          "title": "AI Literacy",
+          "title_nl": "AI-geletterdheid",
+          "summary": "Verplicht aanbieders en gebruikers om AI-geletterdheid te waarborgen bij personeel.",
+          "key_points": [
+            "Vereist voldoende kennis bij personeel",
+            "Rekening houden met technische kennis en context",
+            "Geldt voor iedereen in de waardeketen"
+          ],
+          "application_date": "2 februari 2025"
+        }
+      ]
+    },
+    {
+      "chapter": 2,
+      "title": "Prohibited AI Practices",
+      "title_nl": "Verboden AI-Praktijken",
+      "articles": "5",
+      "key_articles": [
+        {
+          "article": 5,
+          "title": "Prohibited AI Practices",
+          "title_nl": "Verboden AI-praktijken",
+          "summary": "Definieert 8 categorien AI-toepassingen die volledig verboden zijn.",
+          "application_date": "2 februari 2025",
+          "prohibitions": [
+            {
+              "id": "5(1)(a)",
+              "name": "Subliminale manipulatie",
+              "description": "AI die technieken gebruikt buiten het bewustzijn om gedrag te verstoren"
+            },
+            {
+              "id": "5(1)(b)",
+              "name": "Exploitatie kwetsbaarheden",
+              "description": "AI die kwetsbaarheden (leeftijd, handicap) exploiteert voor gedragsmanipulatie"
+            },
+            {
+              "id": "5(1)(c)",
+              "name": "Sociale scoring door overheden",
+              "description": "Evaluatie/classificatie van personen op basis van sociaal gedrag met nadelige gevolgen"
+            },
+            {
+              "id": "5(1)(d)",
+              "name": "Crimineel risicoprofiling",
+              "description": "Voorspellen criminaliteit puur op basis van profilering zonder concrete aanwijzingen"
+            },
+            {
+              "id": "5(1)(e)",
+              "name": "Ongerichte gezichtsscraping",
+              "description": "Opbouwen gezichtsdatabases via ongerichte scraping van internet/CCTV"
+            },
+            {
+              "id": "5(1)(f)",
+              "name": "Emotieherkenning op werk/school",
+              "description": "Emotie-inferentie op werkplek en in onderwijs (behalve medisch/veiligheid)"
+            },
+            {
+              "id": "5(1)(g)",
+              "name": "Biometrische categorisatie beschermde kenmerken",
+              "description": "Categoriseren personen op ras, politieke mening, religie, seksualiteit via biometrie"
+            },
+            {
+              "id": "5(1)(h)",
+              "name": "Real-time biometrische identificatie",
+              "description": "Real-time gezichtsherkenning in openbare ruimtes voor rechtshandhaving (met uitzonderingen)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapter": 3,
+      "title": "High-Risk AI Systems",
+      "title_nl": "Hoog-Risico AI-Systemen",
+      "articles": "6-51",
+      "sections": [
+        {
+          "section": 1,
+          "title": "Classification of AI Systems as High-Risk",
+          "articles": "6-7",
+          "key_articles": [
+            {
+              "article": 6,
+              "title": "Classification Rules",
+              "title_nl": "Classificatieregels",
+              "summary": "Definieert twee routes waardoor AI hoog-risico wordt.",
+              "routes": [
+                {
+                  "route": "Artikel 6(1) - Product regelgeving",
+                  "description": "AI als veiligheidscomponent van product onder EU-wetgeving (Bijlage I)",
+                  "examples": ["Medische apparaten", "Speelgoed", "Machines", "Voertuigen"]
+                },
+                {
+                  "route": "Artikel 6(2) - Specifieke use cases",
+                  "description": "AI-systemen in specifieke risicogebieden (Bijlage III)",
+                  "examples": ["Biometrie", "Onderwijs", "Werkgelegenheid", "Rechtshandhaving"]
+                }
+              ],
+              "exception_6_3": "Systemen in Bijlage III kunnen uitgezonderd worden als ze geen significant risico vormen"
+            },
+            {
+              "article": 7,
+              "title": "Amendments to Annex III",
+              "title_nl": "Wijzigingen Bijlage III",
+              "summary": "Geeft de Commissie de bevoegdheid om Bijlage III bij te werken."
+            }
+          ]
+        },
+        {
+          "section": 2,
+          "title": "Requirements for High-Risk AI Systems",
+          "articles": "8-15",
+          "key_articles": [
+            {
+              "article": 9,
+              "title": "Risk Management System",
+              "title_nl": "Risicobeheersysteem",
+              "summary": "Vereist een continu risicobeheersysteem gedurende de hele levenscyclus.",
+              "requirements": [
+                "Identificatie en analyse van bekende en voorzienbare risico's",
+                "Inschatting van risico's bij beoogd gebruik en redelijkerwijs voorzienbaar misbruik",
+                "Evaluatie van risico's op basis van post-market monitoring data",
+                "Implementatie van passende risicobeperkende maatregelen"
+              ]
+            },
+            {
+              "article": 10,
+              "title": "Data and Data Governance",
+              "title_nl": "Data en Datagovernance",
+              "summary": "Stelt eisen aan trainings-, validatie- en testdata.",
+              "requirements": [
+                "Relevante en representatieve datasets",
+                "Datagovernance- en beheerprotocollen",
+                "Beoordeling op mogelijke bias",
+                "Passende statistische eigenschappen"
+              ]
+            },
+            {
+              "article": 11,
+              "title": "Technical Documentation",
+              "title_nl": "Technische Documentatie",
+              "summary": "Vereist uitgebreide technische documentatie volgens Bijlage IV."
+            },
+            {
+              "article": 12,
+              "title": "Record-keeping",
+              "title_nl": "Automatische Logging",
+              "summary": "Vereist automatische logging van gebeurtenissen tijdens werking."
+            },
+            {
+              "article": 13,
+              "title": "Transparency and Provision of Information",
+              "title_nl": "Transparantie en Informatieverstrekking",
+              "summary": "AI moet transparant zijn met duidelijke gebruiksinstructies."
+            },
+            {
+              "article": 14,
+              "title": "Human Oversight",
+              "title_nl": "Menselijk Toezicht",
+              "summary": "Vereist effectief menselijk toezicht tijdens gebruik.",
+              "oversight_options": [
+                "Menselijke supervisie tijdens operatie",
+                "Mogelijkheid tot interventie",
+                "Stopknop of vergelijkbare functie"
+              ]
+            },
+            {
+              "article": 15,
+              "title": "Accuracy, Robustness and Cybersecurity",
+              "title_nl": "Nauwkeurigheid, Robuustheid en Cybersecurity",
+              "summary": "Technische eisen voor betrouwbaarheid en beveiliging."
+            }
+          ]
+        },
+        {
+          "section": 3,
+          "title": "Obligations of Providers and Deployers",
+          "articles": "16-27",
+          "key_articles": [
+            {
+              "article": 16,
+              "title": "Provider Obligations",
+              "title_nl": "Verplichtingen Aanbieders",
+              "summary": "Uitgebreide lijst van verplichtingen voor aanbieders van hoog-risico AI.",
+              "obligations": [
+                "Conformiteitsbeoordeling uitvoeren",
+                "Kwaliteitsmanagementsysteem implementeren",
+                "Technische documentatie opstellen",
+                "Registratie in EU-database",
+                "CE-markering aanbrengen",
+                "Post-market monitoring"
+              ]
+            },
+            {
+              "article": 22,
+              "title": "Authorized Representatives",
+              "title_nl": "Gemachtigde Vertegenwoordigers",
+              "summary": "Vereisten voor vertegenwoordigers van niet-EU aanbieders."
+            },
+            {
+              "article": 26,
+              "title": "Deployer Obligations",
+              "title_nl": "Verplichtingen Gebruikers (Deployers)",
+              "summary": "Verplichtingen voor organisaties die hoog-risico AI inzetten.",
+              "obligations": [
+                "Gebruik volgens instructies van aanbieder",
+                "Menselijk toezicht door competent personeel",
+                "Input data relevant voor beoogd doel",
+                "Monitoring van werking",
+                "Bewaren van logs",
+                "DPIA uitvoeren indien vereist",
+                "Informeren van betrokken personen"
+              ]
+            },
+            {
+              "article": 27,
+              "title": "Fundamental Rights Impact Assessment",
+              "title_nl": "Grondrechteneffectbeoordeling",
+              "summary": "Vereist FRIA voor bepaalde deployers van hoog-risico AI.",
+              "applies_to": [
+                "Publieke instanties",
+                "Private entiteiten die publieke diensten leveren"
+              ],
+              "must_assess": [
+                "Processen waar het AI-systeem wordt gebruikt",
+                "Periode en frequentie van gebruik",
+                "Categorieën getroffen personen",
+                "Specifieke risico's voor kwetsbare groepen",
+                "Menselijke toezichtmaatregelen"
+              ]
+            }
+          ]
+        },
+        {
+          "section": 4,
+          "title": "Notifying Authorities and Notified Bodies",
+          "articles": "28-39"
+        },
+        {
+          "section": 5,
+          "title": "Standards, Conformity Assessment, Certificates, Registration",
+          "articles": "40-49",
+          "key_articles": [
+            {
+              "article": 43,
+              "title": "Conformity Assessment",
+              "title_nl": "Conformiteitsbeoordeling",
+              "summary": "Beschrijft de procedures voor conformiteitsbeoordeling.",
+              "procedures": [
+                "Interne controle (zelfbeoordeling)",
+                "Beoordeling door notified body"
+              ]
+            },
+            {
+              "article": 49,
+              "title": "EU Database Registration",
+              "title_nl": "Registratie EU-Database",
+              "summary": "Vereist registratie in publieke EU AI database."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapter": 4,
+      "title": "Transparency Obligations",
+      "title_nl": "Transparantieverplichtingen",
+      "articles": "50",
+      "key_articles": [
+        {
+          "article": 50,
+          "title": "Transparency Obligations",
+          "title_nl": "Transparantieverplichtingen",
+          "summary": "Specifieke transparantieverplichtingen voor bepaalde AI-systemen.",
+          "application_date": "2 augustus 2025",
+          "obligations": [
+            {
+              "id": "50(1)",
+              "applies_to": "AI-systemen die direct met mensen interacteren",
+              "requirement": "Informeren dat men met AI interacteert",
+              "exception": "Tenzij duidelijk uit context"
+            },
+            {
+              "id": "50(2)",
+              "applies_to": "AI die synthetische audio/video/beeld genereert (deepfakes)",
+              "requirement": "Markeren als AI-gegenereerd in machine-leesbaar formaat"
+            },
+            {
+              "id": "50(3)",
+              "applies_to": "AI die emoties herkent of biometrisch categoriseert",
+              "requirement": "Informeren van betrokken personen over werking"
+            },
+            {
+              "id": "50(4)",
+              "applies_to": "Deepfakes - AI-gegenereerde of gemanipuleerde content",
+              "requirement": "Openbaarmaking dat content AI-gegenereerd of gemanipuleerd is",
+              "exception": "Artistieke/satirische werken met duidelijke disclosure"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "chapter": 5,
+      "title": "General-Purpose AI Models",
+      "title_nl": "General-Purpose AI-Modellen",
+      "articles": "51-56",
+      "application_date": "2 augustus 2025",
+      "key_articles": [
+        {
+          "article": 51,
+          "title": "Classification of GPAI Models with Systemic Risk",
+          "title_nl": "Classificatie GPAI-Modellen met Systemisch Risico",
+          "summary": "Definieert wanneer een GPAI-model als systemisch risico wordt aangemerkt.",
+          "criteria": [
+            "Training compute > 10^25 FLOPS",
+            "Of: aanwijzing door Commissie op basis van capabilities"
+          ]
+        },
+        {
+          "article": 53,
+          "title": "Obligations for All GPAI Providers",
+          "title_nl": "Verplichtingen voor Alle GPAI-Aanbieders",
+          "summary": "Basisverplichtingen voor alle GPAI-modellen.",
+          "obligations": [
+            "Technische documentatie opstellen",
+            "Informatie aan downstream aanbieders",
+            "Copyright compliance beleid",
+            "Samenvatting trainingsdata publiceren"
+          ]
+        },
+        {
+          "article": 55,
+          "title": "Obligations for Systemic Risk GPAI",
+          "title_nl": "Verplichtingen GPAI met Systemisch Risico",
+          "summary": "Extra verplichtingen voor zeer krachtige AI-modellen.",
+          "additional_obligations": [
+            "Model evaluatie inclusief adversarial testing",
+            "Beoordeling en mitigatie systemische risico's",
+            "Incident tracking en rapportage",
+            "Adequate cybersecurity bescherming"
+          ]
+        },
+        {
+          "article": 56,
+          "title": "Codes of Practice",
+          "title_nl": "Gedragscodes",
+          "summary": "AI Office kan gedragscodes ontwikkelen voor compliance."
+        }
+      ]
+    },
+    {
+      "chapter": 7,
+      "title": "Governance",
+      "title_nl": "Governance",
+      "articles": "64-70",
+      "key_bodies": [
+        {
+          "body": "AI Office",
+          "description": "Onderdeel van Europese Commissie voor GPAI-toezicht",
+          "article": 64
+        },
+        {
+          "body": "AI Board",
+          "description": "Adviesorgaan met lidstaat-vertegenwoordigers",
+          "article": 65
+        },
+        {
+          "body": "Scientific Panel",
+          "description": "Wetenschappelijk advies over GPAI",
+          "article": 68
+        },
+        {
+          "body": "Advisory Forum",
+          "description": "Stakeholder consultatie",
+          "article": 67
+        }
+      ]
+    },
+    {
+      "chapter": 9,
+      "title": "Post-Market Monitoring, Information Sharing, Market Surveillance",
+      "title_nl": "Post-Market Monitoring en Markttoezicht",
+      "articles": "72-94",
+      "key_articles": [
+        {
+          "article": 72,
+          "title": "Post-Market Monitoring",
+          "title_nl": "Post-Market Monitoring",
+          "summary": "Vereist systeem voor monitoring na in-de-handel-brengen."
+        },
+        {
+          "article": 73,
+          "title": "Reporting Serious Incidents",
+          "title_nl": "Melden Ernstige Incidenten",
+          "summary": "Aanbieders moeten ernstige incidenten melden aan autoriteiten.",
+          "timeline": "Binnen 15 dagen na ontdekking (of eerder bij ernstig risico)"
+        }
+      ]
+    },
+    {
+      "chapter": 10,
+      "title": "Codes of Conduct and Guidelines",
+      "title_nl": "Gedragscodes en Richtsnoeren",
+      "articles": "95-96",
+      "key_articles": [
+        {
+          "article": 95,
+          "title": "Voluntary Codes of Conduct",
+          "title_nl": "Vrijwillige Gedragscodes",
+          "summary": "Moedigt vrijwillige gedragscodes aan voor niet-hoog-risico AI."
+        }
+      ]
+    },
+    {
+      "chapter": 11,
+      "title": "Regulatory Sandboxes and Real-World Testing",
+      "title_nl": "Regulatory Sandboxes en Real-World Testing",
+      "articles": "57-63",
+      "key_articles": [
+        {
+          "article": 57,
+          "title": "AI Regulatory Sandboxes",
+          "title_nl": "AI Regulatory Sandboxes",
+          "summary": "Lidstaten moeten sandboxes opzetten voor innovatie.",
+          "deadline": "2 augustus 2026"
+        }
+      ]
+    },
+    {
+      "chapter": 12,
+      "title": "Penalties",
+      "title_nl": "Sancties",
+      "articles": "99-101",
+      "key_articles": [
+        {
+          "article": 99,
+          "title": "Penalties",
+          "title_nl": "Sancties",
+          "summary": "Definieert boetes voor overtredingen.",
+          "penalty_tiers": [
+            {
+              "tier": 1,
+              "violation": "Verboden praktijken (Art. 5)",
+              "max_fine": "€35 miljoen of 7% wereldwijde omzet"
+            },
+            {
+              "tier": 2,
+              "violation": "Hoog-risico verplichtingen",
+              "max_fine": "€15 miljoen of 3% wereldwijde omzet"
+            },
+            {
+              "tier": 3,
+              "violation": "Onjuiste informatie",
+              "max_fine": "€7,5 miljoen of 1% wereldwijde omzet"
+            }
+          ],
+          "sme_protection": "MKB: laagste van percentage of vast bedrag"
+        }
+      ]
+    },
+    {
+      "chapter": 13,
+      "title": "Final Provisions",
+      "title_nl": "Slotbepalingen",
+      "articles": "102-113",
+      "key_articles": [
+        {
+          "article": 111,
+          "title": "Entry into Force and Application",
+          "title_nl": "Inwerkingtreding en Toepassing",
+          "summary": "Gefaseerde inwerkingtreding van de verordening.",
+          "timeline": [
+            {
+              "date": "1 augustus 2024",
+              "milestone": "Publicatie in Official Journal"
+            },
+            {
+              "date": "2 februari 2025",
+              "milestone": "Verboden praktijken + AI-geletterdheid"
+            },
+            {
+              "date": "2 augustus 2025",
+              "milestone": "GPAI + Governance + Transparantie"
+            },
+            {
+              "date": "2 augustus 2026",
+              "milestone": "Volledig van toepassing"
+            },
+            {
+              "date": "2 augustus 2027",
+              "milestone": "Hoog-risico via Bijlage I productregelgeving"
+            }
+          ]
+        },
+        {
+          "article": 113,
+          "title": "Entry into Force",
+          "title_nl": "Inwerkingtreding",
+          "summary": "Verordening treedt 20 dagen na publicatie in werking."
+        }
+      ]
+    }
+  ],
+  "quick_reference": {
+    "most_cited_articles": [
+      {"article": 3, "reason": "Alle definities"},
+      {"article": 5, "reason": "Verboden praktijken"},
+      {"article": 6, "reason": "Hoog-risico classificatie"},
+      {"article": 16, "reason": "Aanbieder verplichtingen"},
+      {"article": 26, "reason": "Deployer verplichtingen"},
+      {"article": 50, "reason": "Transparantie"},
+      {"article": 53, "reason": "GPAI verplichtingen"},
+      {"article": 99, "reason": "Boetes"}
+    ],
+    "implementation_priority": [
+      "Artikel 5 - Controleer op verboden praktijken",
+      "Artikel 6 - Bepaal risico-classificatie",
+      "Artikel 4 - Zorg voor AI-geletterdheid",
+      "Artikel 50 - Implementeer transparantie",
+      "Artikel 9-15 - Voldoe aan hoog-risico eisen"
+    ]
+  }
+}
