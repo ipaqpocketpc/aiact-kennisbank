@@ -19,29 +19,35 @@ jobs:
         run: |
           echo "Checking AI Office for updates..."
           
-          # Get last check hash
-          LAST_HASH=$(cat .github/last-hash.txt 2>/dev/null || echo "none")
+          # Get last check hash (use correct filename)
+          LAST_HASH=$(cat .github/last-check.txt 2>/dev/null || echo "none")
           
           # Fetch latest news page
           curl -s "https://digital-strategy.ec.europa.eu/en/news?topic=135" > /tmp/news.html
           
-          # Create hash of current content
-          CURRENT_HASH=$(grep -oP '(?<=<h3[^>]*>)[^<]+' /tmp/news.html | head -10 | md5sum | cut -d' ' -f1)
+          # Create hash of current content (more robust parsing)
+          # Extract text content, filter for relevant items
+          CURRENT_HASH=$(cat /tmp/news.html | grep -oE '<h[23][^>]*>[^<]+</h[23]>' | head -10 | md5sum | cut -d' ' -f1 || echo "empty")
           
           echo "Last hash: $LAST_HASH"
           echo "Current hash: $CURRENT_HASH"
           
-          if [ "$LAST_HASH" != "$CURRENT_HASH" ]; then
+          if [ "$LAST_HASH" != "$CURRENT_HASH" ] && [ "$CURRENT_HASH" != "empty" ]; then
             echo "has_updates=true" >> $GITHUB_OUTPUT
             
-            # Extract titles
-            grep -oP '(?<=<h3[^>]*>)[^<]+' /tmp/news.html | head -5 > /tmp/titles.txt
-            echo "titles<<EOF" >> $GITHUB_OUTPUT
-            cat /tmp/titles.txt >> $GITHUB_OUTPUT
-            echo "EOF" >> $GITHUB_OUTPUT
+            # Extract titles (more robust)
+            cat /tmp/news.html | grep -oE '<h3[^>]*>[^<]+</h3>' | sed 's/<[^>]*>//g' | head -5 > /tmp/titles.txt || true
+            
+            if [ -s /tmp/titles.txt ]; then
+              echo "titles<<EOF" >> $GITHUB_OUTPUT
+              cat /tmp/titles.txt >> $GITHUB_OUTPUT
+              echo "EOF" >> $GITHUB_OUTPUT
+            else
+              echo "titles=Nieuwe content gedetecteerd (titels niet geparsed)" >> $GITHUB_OUTPUT
+            fi
             
             # Save new hash
-            echo "$CURRENT_HASH" > .github/last-hash.txt
+            echo "$CURRENT_HASH" > .github/last-check.txt
           else
             echo "has_updates=false" >> $GITHUB_OUTPUT
             echo "No changes detected"
@@ -68,6 +74,6 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add .github/last-hash.txt
-          git commit -m "chore: update source hash"
-          git push
+          git add .github/last-check.txt
+          git diff --staged --quiet || git commit -m "chore: update source hash"
+          git push || echo "Nothing to push"
