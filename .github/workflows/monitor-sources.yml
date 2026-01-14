@@ -19,43 +19,58 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         
-      - name: Check AI Office Updates
+      - name: Check EU Digital Strategy RSS Feed
         id: check_updates
         run: |
-          echo "Checking AI Office for updates..."
+          echo "Checking EU Digital Strategy RSS feed for AI Act updates..."
           
-          # Get last check hash (use correct filename)
+          # Get last check hash
           LAST_HASH=$(cat .github/last-check.txt 2>/dev/null || echo "none")
-          
-          # Fetch latest news page
-          curl -s "https://digital-strategy.ec.europa.eu/en/news?topic=135" > /tmp/news.html
-          
-          # Create hash of current content (more robust parsing)
-          # Extract text content, filter for relevant items
-          CURRENT_HASH=$(cat /tmp/news.html | grep -oE '<h[23][^>]*>[^<]+</h[23]>' | head -10 | md5sum | cut -d' ' -f1 || echo "empty")
-          
           echo "Last hash: $LAST_HASH"
+          
+          # Fetch RSS feed (much more reliable than HTML scraping)
+          curl -s "https://digital-strategy.ec.europa.eu/en/rss.xml" > /tmp/rss.xml
+          
+          # Extract all titles from RSS
+          grep -oP '(?<=<title>)[^<]+(?=</title>)' /tmp/rss.xml | tail -n +2 > /tmp/all_titles.txt
+          
+          # Filter for AI-related news (case insensitive)
+          grep -iE 'AI|artificial intelligence|AI Act|GPAI|machine learning|algorithm' /tmp/all_titles.txt > /tmp/ai_titles.txt || true
+          
+          # Create hash of AI-related titles
+          if [ -s /tmp/ai_titles.txt ]; then
+            CURRENT_HASH=$(md5sum /tmp/ai_titles.txt | cut -d' ' -f1)
+          else
+            # If no AI titles, hash all titles
+            CURRENT_HASH=$(md5sum /tmp/all_titles.txt | cut -d' ' -f1)
+          fi
+          
           echo "Current hash: $CURRENT_HASH"
           
-          if [ "$LAST_HASH" != "$CURRENT_HASH" ] && [ "$CURRENT_HASH" != "empty" ]; then
+          # Check if there are changes
+          if [ "$LAST_HASH" != "$CURRENT_HASH" ]; then
+            echo "Changes detected!"
             echo "has_updates=true" >> $GITHUB_OUTPUT
             
-            # Extract titles (more robust)
-            cat /tmp/news.html | grep -oE '<h3[^>]*>[^<]+</h3>' | sed 's/<[^>]*>//g' | head -5 > /tmp/titles.txt || true
-            
-            if [ -s /tmp/titles.txt ]; then
-              echo "titles<<EOF" >> $GITHUB_OUTPUT
-              cat /tmp/titles.txt >> $GITHUB_OUTPUT
-              echo "EOF" >> $GITHUB_OUTPUT
+            # Get titles for the issue (prefer AI titles, fallback to recent)
+            if [ -s /tmp/ai_titles.txt ]; then
+              head -5 /tmp/ai_titles.txt > /tmp/issue_titles.txt
+              echo "ai_specific=true" >> $GITHUB_OUTPUT
             else
-              echo "titles=Nieuwe content gedetecteerd (titels niet geparsed)" >> $GITHUB_OUTPUT
+              head -5 /tmp/all_titles.txt > /tmp/issue_titles.txt
+              echo "ai_specific=false" >> $GITHUB_OUTPUT
             fi
+            
+            # Output titles for issue creation
+            echo "titles<<EOF" >> $GITHUB_OUTPUT
+            cat /tmp/issue_titles.txt >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
             
             # Save new hash
             echo "$CURRENT_HASH" > .github/last-check.txt
           else
-            echo "has_updates=false" >> $GITHUB_OUTPUT
             echo "No changes detected"
+            echo "has_updates=false" >> $GITHUB_OUTPUT
           fi
           
       - name: Create Issue if Updates Found
@@ -64,13 +79,38 @@ jobs:
         with:
           script: |
             const titles = `${{ steps.check_updates.outputs.titles }}`;
+            const aiSpecific = '${{ steps.check_updates.outputs.ai_specific }}' === 'true';
             const today = new Date().toISOString().split('T')[0];
+            
+            const issueTitle = aiSpecific 
+              ? `🤖 AI Act gerelateerd nieuws - ${today}`
+              : `📰 EU Digital Strategy update - ${today}`;
+            
+            const titleList = titles
+              .split('\n')
+              .filter(t => t.trim())
+              .map(t => `- ${t.trim()}`)
+              .join('\n');
             
             await github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              title: `Nieuwe AI Act publicatie - ${today}`,
-              body: `## Nieuwe content gevonden!\n\nDe volgende nieuwe items zijn gedetecteerd:\n\n${titles.split('\n').filter(t => t.trim()).map(t => `- ${t}`).join('\n')}\n\n### Bronnen\n- [AI Office News](https://digital-strategy.ec.europa.eu/en/news?topic=135)\n- [EUR-Lex AI Act](https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX%3A32024R1689)\n\n### Actie\n- [ ] Check de bron\n- [ ] Maak een update post op aiacteu.nl\n- [ ] Update kennisbank indien nodig`,
+              title: issueTitle,
+              body: `## Nieuwe content gevonden!
+
+            ${aiSpecific ? '**AI-gerelateerde updates gedetecteerd:**' : '**Recente updates:**'}
+
+            ${titleList}
+
+            ### Bronnen
+            - [EU Digital Strategy RSS](https://digital-strategy.ec.europa.eu/en/rss.xml)
+            - [AI Office](https://digital-strategy.ec.europa.eu/en/policies/ai-office)
+            - [EUR-Lex AI Act](https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX%3A32024R1689)
+
+            ### Actie
+            - [ ] Check de relevantie voor aiacteu.nl
+            - [ ] Maak eventueel een update post
+            - [ ] Update kennisbank indien nodig`,
               labels: ['nieuws', 'actie-nodig']
             });
             
@@ -80,5 +120,5 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add .github/last-check.txt
-          git diff --staged --quiet || git commit -m "chore: update source hash"
+          git diff --staged --quiet || git commit -m "chore: update source hash [skip ci]"
           git push || echo "Nothing to push"
