@@ -6,6 +6,11 @@ on:
     - cron: '0 8 * * *'
   workflow_dispatch: # Handmatig triggeren
 
+# Required permissions for creating issues and pushing
+permissions:
+  contents: write
+  issues: write
+
 jobs:
   check-sources:
     runs-on: ubuntu-latest
